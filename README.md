@@ -36,7 +36,7 @@
 
 ### 🟨 07-20 데일리 문제
 
-이 제목과 문제 링크를 수정해 `main` 브랜치에 push하면 `problem_solve/` 하위에 폴더가 자동으로 생성됩니다.
+이 제목과 문제 링크를 수정해 `main` 브랜치에 push하면 `problem_solve/` 하위에 폴더 자동 생성
 
 [네트워크](https://school.programmers.co.kr/learn/courses/30/lessons/43162)  
 
