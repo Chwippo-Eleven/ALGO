@@ -6,7 +6,7 @@ import sys
 from typing import Iterable
 
 ROOT_README = Path("README.md")
-TARGET_ROOT = Path("problem_solve")
+TARGET_ROOT = Path("v2.2") / "daily"
 DEFAULT_LANGUAGES = ["java"]
 
 LANG_EXTENSIONS = {
