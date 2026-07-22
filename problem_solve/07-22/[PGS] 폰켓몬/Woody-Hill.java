@@ -1,10 +1,18 @@
-import java.io.*;
-import java.util.*;
+import java.util.HashSet;
+import java.util.Set;
 
-class Main {
-    public static void main(String[] args) throws Exception {
-        BufferedReader br = new BufferedReader(
-            new InputStreamReader(System.in)
-        );
+class Solution {
+    
+    public int solution(int[] nums) {
+        int n = nums.length;
+        Set<Integer> pokedex = new HashSet<>();
+        
+        for (int pokemon : nums) {
+            pokedex.add(pokemon);
+        }
+        
+        int size = pokedex.size();
+        
+        return (size > n / 2) ? (n / 2) : size;
     }
 }
