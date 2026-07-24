@@ -1,19 +1,15 @@
+import java.util.*;
+
 class Solution {
-    public int solution(int[] numbers, int target) {
-        return dfs(numbers, target, 0, 0);
-    }
-    
-    public int dfs(int[] numbers, int target, int index, int total) {
-        if (index == numbers.length) {
-            if (total == target) {
-                return 1;
-            }
-            return 0;
+    public int solution(int[] nums) {
+        int answer = 0;
+        
+        Set<Integer> types = new HashSet<>();
+        
+        for (int num : nums) {
+            types.add(num);
         }
         
-        int plus = dfs(numbers, target, index + 1, total + numbers[index]);
-        int minus = dfs(numbers, target, index + 1, total - numbers[index]);
-        
-        return plus + minus;
+        return Math.min(nums.length / 2, types.size());
     }
 }
