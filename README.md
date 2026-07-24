@@ -69,11 +69,11 @@
 <br />
 
 
-### 🟨 07-23 데일리 문제
+### 🟨 07-24 데일리 문제
 
 이 제목과 문제 링크를 수정해 `main` 브랜치에 push하면 `problem_solve/` 하위에 폴더 자동 생성
 
-[타겟 넘버](https://school.programmers.co.kr/learn/courses/30/lessons/43165)  
+[Trapping Rain Water](https://leetcode.com/problems/trapping-rain-water)  
 
 <br />
 
