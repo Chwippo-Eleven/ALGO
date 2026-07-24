@@ -1,10 +1,15 @@
-import java.io.*;
 import java.util.*;
 
-class Main {
-    public static void main(String[] args) throws Exception {
-        BufferedReader br = new BufferedReader(
-            new InputStreamReader(System.in)
-        );
+class Solution {
+    public int solution(int[] nums) {
+        int answer = 0;
+        
+        Set<Integer> types = new HashSet<>();
+        
+        for (int num : nums) {
+            types.add(num);
+        }
+        
+        return Math.min(nums.length / 2, types.size());
     }
 }
