@@ -659,10 +659,7 @@ def make_svg(
         + 20
     )
 
-    repository = os.getenv(
-        "GITHUB_REPOSITORY",
-        "Chwippo-Eleven/ALGO",
-    )
+    repository = "Chwippo-Eleven/ALGO"
 
     output = [
 
