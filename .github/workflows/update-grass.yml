@@ -1,14 +1,12 @@
 name: Update Algorithm Grass
 
 on:
-  # 기존 일괄 PR 병합 Workflow가 끝난 뒤 실행
   workflow_run:
     workflows:
       - "Batch merge all PRs"
     types:
       - completed
 
-  # 필요할 때 Actions 화면에서 직접 실행 가능
   workflow_dispatch:
 
 permissions:
@@ -20,13 +18,15 @@ concurrency:
 
 jobs:
   update-grass:
-    # Batch merge가 성공했거나,
-    # 직접 실행한 경우에만 동작
     if: >
-      github.event_name == 'workflow_dispatch' ||
-      github.event.workflow_run.conclusion == 'success'
+      github.repository == 'Chwippo-Eleven/ALGO' &&
+      (
+        github.event_name == 'workflow_dispatch' ||
+        github.event.workflow_run.conclusion == 'success'
+      )
 
     runs-on: ubuntu-latest
+    timeout-minutes: 5
 
     steps:
       - name: Checkout main
@@ -43,20 +43,20 @@ jobs:
         run: |
           python .github/scripts/update_grass.py
 
-      - name: Commit grass
+      - name: Commit grass SVG
         shell: bash
         run: |
-          if [ -z "$(git status --porcelain -- README.md assets/algorithm-grass.svg)" ]; then
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          git add -- assets/algorithm-grass.svg
+
+          if git diff --cached --quiet; then
             echo "잔디 변경 사항이 없습니다."
             exit 0
           fi
 
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "chore: 알고리즘 잔디 업데이트 [skip ci]"
 
-          git add README.md
-          git add assets/algorithm-grass.svg
-
-          git commit -m "docs: 알고리즘 잔디 업데이트"
-
+          git pull --rebase origin main
           git push origin HEAD:main
