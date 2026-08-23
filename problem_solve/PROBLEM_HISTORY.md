@@ -3,7 +3,7 @@
 > 이 파일은 GitHub Actions가 자동으로 생성합니다.
 > 문제 중복 여부는 URL 기준으로 판단합니다.
 
-총 문제 수: **24**
+총 문제 수: **25**
 
 | 날짜 | 플랫폼 | 문제 | URL |
 |---|---|---|---|
@@ -31,3 +31,4 @@
 | 08-19 | SWEA | 치즈 도둑 | https://swexpertacademy.com/main/code/problem/problemDetail.do?problemLevel=4&contestProbId=AWrDOdQqRCUDFARG&categoryId=AWrDOdQqRCUDFARG&categoryType=CODE&problemTitle=&orderBy=PASS_RATE&selectCodeLang=ALL&select-1=4&pageSize=10&pageIndex=6 |
 | 08-20 | PGS | 캐시 | https://school.programmers.co.kr/learn/courses/30/lessons/17680 |
 | 08-21 | PGS | 뉴스 클러스터링 | https://school.programmers.co.kr/learn/courses/30/lessons/17677 |
+| 08-24 | SWEA | 상호의 배틀필드 | https://swexpertacademy.com/main/code/problem/problemDetail.do?problemLevel=3&contestProbId=AV5LyE7KD2ADFAXc&categoryId=AV5LyE7KD2ADFAXc&categoryType=CODE&problemTitle=&orderBy=INQUERY_COUNT&selectCodeLang=ALL&select-1=3&pageSize=10&pageIndex=2 |
