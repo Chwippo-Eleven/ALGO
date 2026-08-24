@@ -2,7 +2,6 @@ name: Update Problem Duty
 
 on:
   schedule:
-    # 월~금 오후 18:00 KST
     - cron: "0 18 * * 1-5"
       timezone: "Asia/Seoul"
 
@@ -17,6 +16,8 @@ concurrency:
 
 jobs:
   update-duty:
+    if: github.repository == 'Chwippo-Eleven/ALGO'
+
     runs-on: ubuntu-latest
     timeout-minutes: 5
 
@@ -41,10 +42,8 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
 
-          # assets가 gitignore여도 SVG를 강제로 staging
-          git add -f -- assets/problem-duty.svg
+          git add -- assets/problem-duty.svg
 
-          # staging 이후 변경 여부 확인
           if git diff --cached --quiet; then
             echo "담당자 SVG 변경 사항이 없습니다."
             exit 0
