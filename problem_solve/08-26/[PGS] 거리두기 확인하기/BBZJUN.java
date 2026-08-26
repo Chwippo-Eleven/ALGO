@@ -35,7 +35,6 @@ class Solution {
                             if (nx < 0 || nx > 4 || ny < 0 || ny > 4){ // 범위쳌
                                 continue;
                             }
-
                             //체크 하고
                             if (pl[ny][nx] == 'P'){ // 범위가 사람이면
                                 // 검증해야함 파티션까지 
@@ -47,14 +46,9 @@ class Solution {
                             }
                         }
                     } 
-
-
-                    
                 }
             }        
         }
-    
-        
         return answer;
     }
     
@@ -97,15 +91,8 @@ class Solution {
                 else{
                     continue;
                 }
-                
             }
-            
         }
-        
         return count[endY][endX];
-    }
-    
-    public static int mht(int r1, int c1, int r2, int c2){
-        return Math.abs(r1 - r2) + Math.abs(c1 - c2);
     }
 }
