@@ -98,8 +98,8 @@
 
 <br />
 
-### 🟨 08-25 데일리 문제
-[섬 연결하기](https://school.programmers.co.kr/learn/courses/30/lessons/42861)
+### 🟨 08-27 데일리 문제
+[바이러스 파이프](https://school.programmers.co.kr/learn/courses/30/lessons/468373)
 
 
 <br />
