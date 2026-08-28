@@ -1,3 +1,5 @@
+######헉 여기에 올리면 안되는데........................죄송합니다.....
+
 from collections import Counter
 
 def solution(k, t):
