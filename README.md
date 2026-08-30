@@ -98,9 +98,8 @@
 
 <br />
 
-### 🟨 08-28 데일리 문제
-[귤 고르기](https://school.programmers.co.kr/learn/courses/30/lessons/138476)
-
+### 🟨 08-31 데일리 문제
+[양과 늑대] (https://school.programmers.co.kr/learn/courses/30/lessons/92343)
 
 <br />
 
