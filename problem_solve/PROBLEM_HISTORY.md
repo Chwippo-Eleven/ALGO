@@ -3,7 +3,7 @@
 > 이 파일은 GitHub Actions가 자동으로 생성합니다.
 > 문제 중복 여부는 URL 기준으로 판단합니다.
 
-총 문제 수: **30**
+총 문제 수: **31**
 
 | 날짜 | 플랫폼 | 문제 | URL |
 |---|---|---|---|
@@ -37,3 +37,4 @@
 | 08-27 | PGS | 바이러스 파이프 | https://school.programmers.co.kr/learn/courses/30/lessons/468373 |
 | 08-28 | PGS | 귤 고르기 | https://school.programmers.co.kr/learn/courses/30/lessons/138476 |
 | 08-31 | PGS | 양과 늑대 | https://school.programmers.co.kr/learn/courses/30/lessons/92343 |
+| 09-01 | PGS | 단속카메라 | https://school.programmers.co.kr/learn/courses/30/lessons/42884 |
