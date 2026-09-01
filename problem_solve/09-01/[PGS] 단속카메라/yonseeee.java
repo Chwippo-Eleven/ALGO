@@ -10,11 +10,11 @@ class Solution {
 
         
         for(int i=0;i<n;i++){
-            int right=routes[i][1];
+            int out=routes[i][1];
             
             int j;
             for(j=i+1;j<n;j++){
-                if(!(right>=routes[j][0]&&right<=routes[j][1]))break;
+                if(!(out>=routes[j][0]&&out<=routes[j][1]))break;
             }
             i=j-1;
             answer++;
