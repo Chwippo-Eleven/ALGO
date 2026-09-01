@@ -98,8 +98,8 @@
 
 <br />
 
-### 🟨 08-31 데일리 문제
-[양과 늑대](https://school.programmers.co.kr/learn/courses/30/lessons/92343)
+### 🟨 09-01 데일리 문제
+[단속카메라](https://school.programmers.co.kr/learn/courses/30/lessons/42884)
 
 <br />
 
