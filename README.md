@@ -98,8 +98,8 @@
 
 <br />
 
-### 🟨 09-01 데일리 문제
-[단속카메라](https://school.programmers.co.kr/learn/courses/30/lessons/42884)
+### 🟨 09-02 데일리 문제
+[다단계 칫솔 판매]https://school.programmers.co.kr/learn/courses/30/lessons/77486
 
 <br />
 
