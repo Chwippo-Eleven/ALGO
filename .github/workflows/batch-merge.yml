@@ -1,9 +1,9 @@
 name: Batch merge all PRs
 
 on:
-  schedule:
-    # 월~금 오전 11시 7분 정도(KST)
-   - cron: "7 2 * * 1-5"
+  # schedule:
+  #   # 월~금 오전 11시 7분 정도(KST)
+  #  - cron: "7 2 * * 1-5"
 
   workflow_dispatch:
 
