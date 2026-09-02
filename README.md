@@ -99,7 +99,7 @@
 <br />
 
 ### 🟨 09-02 데일리 문제
-[다단계 칫솔 판매](https://school.programmers.co.kr/learn/courses/30/lessons/77486)
+[점프와 순간 이동](https://school.programmers.co.kr/learn/courses/30/lessons/12980)
 
 <br />
 
