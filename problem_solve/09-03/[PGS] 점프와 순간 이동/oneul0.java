@@ -1,8 +1,5 @@
-import java.io.*;
-import java.util.*;
-
-class Main {
-    public static void main(String[] args) throws Exception {
-        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+public class Solution {
+    public int solution(int n) {
+        return Integer.bitCount(n);
     }
 }
