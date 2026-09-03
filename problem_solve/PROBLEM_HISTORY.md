@@ -39,4 +39,3 @@
 | 08-31 | PGS | 양과 늑대 | https://school.programmers.co.kr/learn/courses/30/lessons/92343 |
 | 09-01 | PGS | 단속카메라 | https://school.programmers.co.kr/learn/courses/30/lessons/42884 |
 | 09-02 | PGS | 다단계 칫솔 판매 | https://school.programmers.co.kr/learn/courses/30/lessons/77486 |
-| 09-03 | PGS | 점프와 순간 이동 | https://school.programmers.co.kr/learn/courses/30/lessons/12980 |
