@@ -2,4 +2,4 @@
 
 ## 문제 목록
 
-- [점프와 순간 이동](https://school.programmers.co.kr/learn/courses/30/lessons/12980)
+- [다단계 칫솔 판매](https://school.programmers.co.kr/learn/courses/30/lessons/77486)
