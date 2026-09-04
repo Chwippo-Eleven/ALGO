@@ -98,8 +98,8 @@
 
 <br />
 
-### 🟨 09-03 데일리 문제
-[점프와 순간 이동](https://school.programmers.co.kr/learn/courses/30/lessons/12980)
+### 🟨 09-04 데일리 문제
+[순위](https://school.programmers.co.kr/learn/courses/30/lessons/49191)
 
 <br />
 
