@@ -1,8 +1,10 @@
-import java.io.*;
-import java.util.*;
-
-class Main {
-    public static void main(String[] args) throws Exception {
-        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+public class Solution {
+    public int solution(int n) {       
+        int jump = 0;
+        while (n > 0) {
+            jump += n % 2;
+            n /= 2;
+        }
+        return jump;
     }
 }
