@@ -3,7 +3,7 @@
 > 이 파일은 GitHub Actions가 자동으로 생성합니다.
 > 문제 중복 여부는 URL 기준으로 판단합니다.
 
-총 문제 수: **37**
+총 문제 수: **38**
 
 | 날짜 | 플랫폼 | 문제 | URL |
 |---|---|---|---|
@@ -44,3 +44,4 @@
 | 09-07 | PGS | 자물쇠와 열쇠 | https://school.programmers.co.kr/learn/courses/30/lessons/60059 |
 | 09-08 | LTC | Letter Combinations of a Phone Number | https://leetcode.com/problems/letter-combinations-of-a-phone-number/description/ |
 | 09-09 | PGS | 전력망을 둘로 나누기 | https://school.programmers.co.kr/learn/courses/30/lessons/86971 |
+| 09-10 | PGS | 피로도 | https://school.programmers.co.kr/learn/courses/30/lessons/87946 |
