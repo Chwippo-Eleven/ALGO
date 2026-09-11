@@ -44,4 +44,4 @@
 | 09-07 | PGS | 자물쇠와 열쇠 | https://school.programmers.co.kr/learn/courses/30/lessons/60059 |
 | 09-08 | LTC | Letter Combinations of a Phone Number | https://leetcode.com/problems/letter-combinations-of-a-phone-number/description/ |
 | 09-09 | PGS | 전력망을 둘로 나누기 | https://school.programmers.co.kr/learn/courses/30/lessons/86971 |
-| 09-10 | PGS | 미로 탈출 | https://school.programmers.co.kr/learn/courses/30/lessons/159993 |
+| 09-10 | PGS | 피로도 | https://school.programmers.co.kr/learn/courses/30/lessons/87946 |
