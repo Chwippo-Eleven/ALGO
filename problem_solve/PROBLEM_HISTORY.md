@@ -1,9 +1,9 @@
-<img width="2560" height="1440" alt="image" src="https://github.com/user-attachments/assets/92230259-a061-4230-a466-e9902113e3c4" /># 문제 풀이 이력
+# 문제 풀이 이력
 
 > 이 파일은 GitHub Actions가 자동으로 생성합니다.
 > 문제 중복 여부는 URL 기준으로 판단합니다.
 
-총 문제 수: **39**
+총 문제 수: **40**
 
 | 날짜 | 플랫폼 | 문제 | URL |
 |---|---|---|---|
@@ -45,4 +45,5 @@
 | 09-08 | LTC | Letter Combinations of a Phone Number | https://leetcode.com/problems/letter-combinations-of-a-phone-number/description/ |
 | 09-09 | PGS | 전력망을 둘로 나누기 | https://school.programmers.co.kr/learn/courses/30/lessons/86971 |
 | 09-10 | PGS | 피로도 | https://school.programmers.co.kr/learn/courses/30/lessons/87946 |
-| 09-11 | PGS | 미로 탈출 | https://school.programmers.co.kr/learn/courses/30/lessons/84512 |
+| 09-11 | PGS | 미로 탈출 | https://school.programmers.co.kr/learn/courses/30/lessons/159993 |
+| 09-14 | PGS | 모음 사전 | https://school.programmers.co.kr/learn/courses/30/lessons/84512 |
