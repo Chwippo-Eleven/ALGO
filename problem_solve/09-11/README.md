@@ -2,4 +2,4 @@
 
 ## 문제 목록
 
-- [모음 사전](https://school.programmers.co.kr/learn/courses/30/lessons/84512)
+- [미로 탈출](https://school.programmers.co.kr/learn/courses/30/lessons/159993)
