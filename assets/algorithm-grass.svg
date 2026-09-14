@@ -52,7 +52,7 @@ text{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,san
 <a xlink:href="https://github.com/oneul0" target="_blank">
 <text x="0" y="136" class="name">김기훈</text>
 </a>
-<text x="72" y="136" class="score">1030점</text>
+<text x="72" y="136" class="score">1060점</text>
 <rect x="125" y="124" width="88" height="17" rx="8.5" fill="#1f6feb"/>
 <text x="169.0" y="135.5" class="badge" text-anchor="middle">DIAMOND</text>
 <a xlink:href="https://github.com/Chwippo-Eleven/ALGO/tree/main/problem_solve/07-21" target="_blank">
@@ -246,11 +246,11 @@ text{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,san
 </rect>
 </a>
 <a xlink:href="https://github.com/Chwippo-Eleven/ALGO/tree/main/problem_solve/09-11" target="_blank">
-<rect x="954" y="125" width="14" height="14" rx="3" fill="#ebedf0">
-<title>김기훈 · 09-11 · 미제출</title>
+<rect x="954" y="125" width="14" height="14" rx="3" fill="#216e39">
+<title>김기훈 · 09-11 · 풀이 완료</title>
 </rect>
 </a>
-<text x="990" y="136" class="stat">이번달 참여 8회 · 최장 스트릭 38일</text>
+<text x="990" y="136" class="stat">이번달 참여 9회 · 최장 스트릭 39일</text>
 <a xlink:href="https://github.com/yeonju73" target="_blank">
 <text x="0" y="164" class="name">박연주</text>
 </a>
@@ -1870,7 +1870,7 @@ text{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,san
 <a xlink:href="https://github.com/qkrcjsdlr10" target="_blank">
 <text x="0" y="388" class="name">박천익</text>
 </a>
-<text x="72" y="388" class="score">1030점</text>
+<text x="72" y="388" class="score">1060점</text>
 <rect x="125" y="376" width="88" height="17" rx="8.5" fill="#1f6feb"/>
 <text x="169.0" y="387.5" class="badge" text-anchor="middle">DIAMOND</text>
 <a xlink:href="https://github.com/Chwippo-Eleven/ALGO/tree/main/problem_solve/07-21" target="_blank">
@@ -2064,9 +2064,9 @@ text{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,san
 </rect>
 </a>
 <a xlink:href="https://github.com/Chwippo-Eleven/ALGO/tree/main/problem_solve/09-11" target="_blank">
-<rect x="954" y="377" width="14" height="14" rx="3" fill="#ebedf0">
-<title>박천익 · 09-11 · 미제출</title>
+<rect x="954" y="377" width="14" height="14" rx="3" fill="#216e39">
+<title>박천익 · 09-11 · 풀이 완료</title>
 </rect>
 </a>
-<text x="990" y="388" class="stat">이번달 참여 8회 · 최장 스트릭 38일</text>
+<text x="990" y="388" class="stat">이번달 참여 9회 · 최장 스트릭 39일</text>
 </svg>
