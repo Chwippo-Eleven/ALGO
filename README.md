@@ -98,8 +98,8 @@
 
 <br />
 
-### 🟨 09-14 데일리 문제
-[모음 사전](https://school.programmers.co.kr/learn/courses/30/lessons/84512)
+### 🟨 09-15 데일리 문제
+[카펫](https://school.programmers.co.kr/learn/courses/30/lessons/42842)
 
 <br />
 
