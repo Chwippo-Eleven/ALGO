@@ -99,7 +99,7 @@
 <br />
 
 ### 🟨 09-15 데일리 문제
-[카펫](https://school.programmers.co.kr/learn/courses/30/lessons/42842)
+[작업순](https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AV18TrIqIwUCFAZN)
 
 <br />
 
