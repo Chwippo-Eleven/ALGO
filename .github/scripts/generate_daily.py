@@ -1,6 +1,8 @@
 from __future__ import annotations
 
+from datetime import date, datetime, timedelta
 from pathlib import Path
+from zoneinfo import ZoneInfo
 from urllib.parse import urlsplit, urlunsplit
 import os
 import re
@@ -47,6 +49,11 @@ MARKDOWN_LINK_FIND_PATTERN = re.compile(
     r"\((?P<url>https?://[^)\s]+)\)"
 )
 
+DAILY_DATE_PATTERN = re.compile(
+    r"^(?P<month>\d{2})-(?P<day>\d{2})$"
+)
+
+KST = ZoneInfo("Asia/Seoul")
 
 def sanitize(name: str) -> str:
     invalid = r'<>:"/\\|?*'
@@ -273,6 +280,80 @@ def collect_problem_history() -> dict[
 
     return history
 
+def validate_daily_dates(
+    blocks: list[tuple[str, str]],
+) -> None:
+    """
+    README의 데일리 날짜가 KST 기준 과거이면 실패시킨다.
+
+    예:
+        오늘 09-16
+        09-15 -> 실패
+        09-16 -> 허용
+        09-17 -> 허용
+    """
+
+    today = datetime.now(
+        KST
+    ).date()
+
+    for daily_title, _ in blocks:
+
+        safe_title = sanitize(
+            daily_title
+        )
+
+        match = DAILY_DATE_PATTERN.fullmatch(
+            safe_title
+        )
+
+        if not match:
+            raise ValueError(
+                "데일리 문제 날짜는 "
+                "MM-DD 형식이어야 합니다: "
+                f"{daily_title}"
+            )
+
+        month = int(
+            match.group("month")
+        )
+
+        day = int(
+            match.group("day")
+        )
+
+        try:
+            target_date = date(
+                today.year,
+                month,
+                day,
+            )
+
+        except ValueError as error:
+            raise ValueError(
+                "올바르지 않은 데일리 날짜입니다: "
+                f"{daily_title}"
+            ) from error
+
+        # 연초에 12월 날짜를 입력한 경우
+        # 전년도 날짜로 판단한다.
+        if (
+            target_date
+            > today + timedelta(days=45)
+        ):
+            target_date = date(
+                today.year - 1,
+                month,
+                day,
+            )
+
+        if target_date < today:
+            raise ValueError(
+                "과거 날짜에는 데일리 문제를 "
+                "생성할 수 없습니다. "
+                f"입력 날짜: {daily_title}, "
+                f"오늘: {today:%m-%d}"
+            )
 
 def validate_daily_titles(
     blocks: list[tuple[str, str]],
@@ -1142,8 +1223,13 @@ def main() -> None:
                 readme_text
             )
         )
-
+        
         validate_daily_titles(
+            daily_blocks
+        )
+        
+        # 과거 날짜 덮어쓰기 방지
+        validate_daily_dates(
             daily_blocks
         )
 
