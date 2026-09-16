@@ -2,4 +2,4 @@
 
 ## 문제 목록
 
-- [카펫](https://school.programmers.co.kr/learn/courses/30/lessons/42842)
+- [작업순](https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AV18TrIqIwUCFAZN)
