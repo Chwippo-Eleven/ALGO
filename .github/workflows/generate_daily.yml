@@ -7,20 +7,17 @@ on:
     paths:
       - README.md
 
-  # Actions 화면에서 수동 실행 가능
   workflow_dispatch:
 
 permissions:
   contents: write
 
-# 같은 브랜치에서 중복 실행되면 이전 실행 취소
 concurrency:
   group: generate-daily-${{ github.ref }}
   cancel-in-progress: true
 
 jobs:
   generate:
-    # GitHub Actions가 만든 커밋에서는 실행하지 않음
     if: github.actor != 'github-actions[bot]'
 
     runs-on: ubuntu-latest
@@ -35,15 +32,11 @@ jobs:
         with:
           python-version: '3.11'
 
-      # 여기서
-      # 1. 기존 문제 URL 수집
-      # 2. 중복 검사
-      # 3. 중복이면 exit 1
-      # 4. 정상일 때 폴더 + PROBLEM_HISTORY.md 생성
-      - name: Check duplicates and generate daily problem folders
+      - name: Validate date, check duplicates and generate daily problem folders
+        env:
+          TZ: Asia/Seoul
         run: python .github/scripts/generate_daily.py
 
-      # 위 단계가 실패하면 이 단계는 실행되지 않음
       - name: Commit generated files
         run: |
           git config user.name "github-actions[bot]"
