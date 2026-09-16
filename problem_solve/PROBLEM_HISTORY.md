@@ -47,4 +47,4 @@
 | 09-10 | PGS | 피로도 | https://school.programmers.co.kr/learn/courses/30/lessons/87946 |
 | 09-11 | PGS | 미로 탈출 | https://school.programmers.co.kr/learn/courses/30/lessons/159993 |
 | 09-14 | PGS | 모음 사전 | https://school.programmers.co.kr/learn/courses/30/lessons/84512 |
-| 09-15 | SWEA | 작업순 | https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AV18TrIqIwUCFAZN |
+| 09-15 | SWEA | 작업순서 | https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AV18TrIqIwUCFAZN |

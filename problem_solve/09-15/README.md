@@ -2,4 +2,4 @@
 
 ## 문제 목록
 
-- [작업순](https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AV18TrIqIwUCFAZN)
+- [작업순서](https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AV18TrIqIwUCFAZN)
