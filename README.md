@@ -98,8 +98,8 @@
 
 <br />
 
-### 🟨 09-17 데일리 문제
-[메뉴 리뉴얼](https://school.programmers.co.kr/learn/courses/30/lessons/72411)
+### 🟨 09-18 데일리 문제
+[다리를 지나는 트럭](https://school.programmers.co.kr/learn/courses/30/lessons/42583)
 
 <br />
 
