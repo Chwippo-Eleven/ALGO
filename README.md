@@ -98,8 +98,8 @@
 
 <br />
 
-### 🟨 09-18 데일리 문제
-[다리를 지나는 트럭](https://school.programmers.co.kr/learn/courses/30/lessons/42583)
+### 🟨 09-21 데일리 문제
+[집합 비교](https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AZcKaddqidnHBITY)
 
 <br />
 
