@@ -98,8 +98,8 @@
 
 <br />
 
-### 🟨 09-22 데일리 문제
-[Redundant Connection](https://leetcode.com/problems/redundant-connection/)
+### 🟨 09-23 데일리 문제
+[보급로](https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AV15QRX6APsCFAYD)
 
 <br />
 
