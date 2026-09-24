@@ -3,7 +3,7 @@
 > 이 파일은 GitHub Actions가 자동으로 생성합니다.
 > 문제 중복 여부는 URL 기준으로 판단합니다.
 
-총 문제 수: **47**
+총 문제 수: **48**
 
 | 날짜 | 플랫폼 | 문제 | URL |
 |---|---|---|---|
@@ -54,3 +54,4 @@
 | 09-21 | SWEA | 집합 비교 | https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AZcKaddqidnHBITY |
 | 09-22 | LTC | Redundant Connection | https://leetcode.com/problems/redundant-connection/ |
 | 09-23 | SWEA | 보급로 | https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AV15QRX6APsCFAYD |
+| 09-28 | PGS | 오픈채팅방 | https://school.programmers.co.kr/learn/courses/30/lessons/42888 |
