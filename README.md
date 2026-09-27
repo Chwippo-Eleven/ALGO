@@ -98,8 +98,8 @@
 
 <br />
 
-### 🟨 09-23 데일리 문제
-[보급로](https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AV15QRX6APsCFAYD)
+### 🟨 09-28 데일리 문제
+[오픈채팅방](https://school.programmers.co.kr/learn/courses/30/lessons/42888)
 
 <br />
 
