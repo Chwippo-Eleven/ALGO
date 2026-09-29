@@ -98,8 +98,8 @@
 
 <br />
 
-### 🟨 09-28 데일리 문제
-[오픈채팅방](https://school.programmers.co.kr/learn/courses/30/lessons/42888)
+### 🟨 09-29 데일리 문제
+[Coin Change](https://leetcode.com/problems/coin-change/description/)
 
 <br />
 
