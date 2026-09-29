@@ -98,8 +98,8 @@
 
 <br />
 
-### 🟨 09-28 데일리 문제
-[오픈채팅방](https://school.programmers.co.kr/learn/courses/30/lessons/42888)
+### 🟨 09-30 데일리 문제
+[기능개발](https://school.programmers.co.kr/learn/courses/30/lessons/42586)
 
 <br />
 
