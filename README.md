@@ -98,8 +98,8 @@
 
 <br />
 
-### 🟨 09-30 데일리 문제
-[기능개발](https://school.programmers.co.kr/learn/courses/30/lessons/42586)
+### 🟨 10-01 데일리 문제
+[Swap Nodes in Pairs](https://leetcode.com/problems/swap-nodes-in-pairs/description/)
 
 <br />
 
