@@ -98,8 +98,8 @@
 
 <br />
 
-### 🟨 10-06 데일리 문제
-[가장 큰 정사각형 찾기](https://school.programmers.co.kr/learn/courses/30/lessons/12905)
+### 🟨 10-07 데일리 문제
+[소수찾기](https://school.programmers.co.kr/learn/courses/30/lessons/42839)
 
 <br />
 
