@@ -3,7 +3,7 @@
 > 이 파일은 GitHub Actions가 자동으로 생성합니다.
 > 문제 중복 여부는 URL 기준으로 판단합니다.
 
-총 문제 수: **53**
+총 문제 수: **54**
 
 | 날짜 | 플랫폼 | 문제 | URL |
 |---|---|---|---|
@@ -60,3 +60,4 @@
 | 10-01 | LTC | Swap Nodes in Pairs | https://leetcode.com/problems/swap-nodes-in-pairs/description/ |
 | 10-02 | PGS | 보석 쇼핑 | https://school.programmers.co.kr/learn/courses/30/lessons/67258 |
 | 10-06 | PGS | 가장 큰 정사각형 찾기 | https://school.programmers.co.kr/learn/courses/30/lessons/12905 |
+| 10-07 | PGS | 소수찾기 | https://school.programmers.co.kr/learn/courses/30/lessons/42839 |
