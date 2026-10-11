@@ -98,8 +98,8 @@
 
 <br />
 
-### 🟨 10-11 데일리 문제
-[Coin Change](https://leetcode.com/problems/coin-change/description/)
+### 🟨 10-12 데일리 문제
+[친구의 키](https://www.codetree.ai/ko/trails/complete/curated-cards/intro-height-of-friends/description)
 
 <br />
 
