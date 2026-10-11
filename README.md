@@ -98,8 +98,8 @@
 
 <br />
 
-### 🟨 10-08 데일리 문제
-[Max Area of Island](https://leetcode.com/problems/max-area-of-island/description/?envType=problem-list-v2&envId=union-find)
+### 🟨 10-11 데일리 문제
+[Coin Change](https://leetcode.com/problems/coin-change/description/)
 
 <br />
 
