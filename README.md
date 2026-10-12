@@ -98,8 +98,8 @@
 
 <br />
 
-### 🟨 10-08 데일리 문제
-[Max Area of Island](https://leetcode.com/problems/max-area-of-island/description/?envType=problem-list-v2&envId=union-find)
+### 🟨 10-12 데일리 문제
+[친구의 키](https://www.codetree.ai/ko/trails/complete/curated-cards/intro-height-of-friends/description)
 
 <br />
 
