@@ -98,8 +98,8 @@
 
 <br />
 
-### 🟨 10-08 데일리 문제
-[Max Area of Island](https://leetcode.com/problems/max-area-of-island/description/?envType=problem-list-v2&envId=union-find)
+### 🟨 10-13 데일리 문제
+[카운트 다운](https://school.programmers.co.kr/learn/courses/30/lessons/131129)
 
 <br />
 
