@@ -3,7 +3,7 @@
 > 이 파일은 GitHub Actions가 자동으로 생성합니다.
 > 문제 중복 여부는 URL 기준으로 판단합니다.
 
-총 문제 수: **56**
+총 문제 수: **57**
 
 | 날짜 | 플랫폼 | 문제 | URL |
 |---|---|---|---|
@@ -63,3 +63,4 @@
 | 10-07 | PGS | 소수찾기 | https://school.programmers.co.kr/learn/courses/30/lessons/42839 |
 | 10-08 | LTC | Max Area of Island | https://leetcode.com/problems/max-area-of-island/description/?envType=problem-list-v2&envId=union-find |
 | 10-12 | ETC | 친구의 키 | https://www.codetree.ai/ko/trails/complete/curated-cards/intro-height-of-friends/description |
+| 10-13 | PGS | 카운트 다운 | https://school.programmers.co.kr/learn/courses/30/lessons/131129 |

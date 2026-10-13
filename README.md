@@ -98,8 +98,8 @@
 
 <br />
 
-### 🟨 10-12 데일리 문제
-[친구의 키](https://www.codetree.ai/ko/trails/complete/curated-cards/intro-height-of-friends/description)
+### 🟨 10-13 데일리 문제
+[카운트 다운](https://school.programmers.co.kr/learn/courses/30/lessons/131129)
 
 <br />
 
