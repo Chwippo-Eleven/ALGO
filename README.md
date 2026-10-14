@@ -98,8 +98,8 @@
 
 <br />
 
-### 🟨 10-13 데일리 문제
-[카운트 다운](https://school.programmers.co.kr/learn/courses/30/lessons/131129)
+### 🟨 10-14 데일리 문제
+[Longest Increasing Sequence](https://leetcode.com/problems/longest-increasing-subsequence/description/)
 
 <br />
 
