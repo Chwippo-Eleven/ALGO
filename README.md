@@ -98,8 +98,8 @@
 
 <br />
 
-### 🟨 10-14 데일리 문제
-[Longest Increasing Sequence](https://leetcode.com/problems/longest-increasing-subsequence/description/)
+### 🟨 10-15 데일리 문제
+[뒤에 있는 큰 수 찾기](https://school.programmers.co.kr/learn/courses/30/lessons/154539)
 
 <br />
 
