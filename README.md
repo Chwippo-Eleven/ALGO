@@ -98,8 +98,8 @@
 
 <br />
 
-### 🟨 10-15 데일리 문제
-[뒤에 있는 큰 수 찾기](https://school.programmers.co.kr/learn/courses/30/lessons/154539)
+### 🟨 10-16 데일리 문제
+[상담원 인원](https://school.programmers.co.kr/learn/courses/30/lessons/214288)
 
 <br />
 
