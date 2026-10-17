@@ -1,8 +1,20 @@
-import java.io.*;
 import java.util.*;
 
-class Main {
-    public static void main(String[] args) throws Exception {
-        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+class Solution {
+    public int[] solution(int[] numbers) {
+        int n = numbers.length;
+        int[] answer = new int[n];
+        Arrays.fill(answer, -1);
+
+        Deque<Integer> stack = new ArrayDeque<>();
+
+        for (int i = 0; i < n; i++) {
+            while (!stack.isEmpty()&& numbers[stack.peek()] < numbers[i]) {
+                answer[stack.pop()] = numbers[i];
+            }
+            stack.push(i);
+        }
+
+        return answer;
     }
 }
