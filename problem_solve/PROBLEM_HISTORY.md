@@ -3,7 +3,7 @@
 > 이 파일은 GitHub Actions가 자동으로 생성합니다.
 > 문제 중복 여부는 URL 기준으로 판단합니다.
 
-총 문제 수: **60**
+총 문제 수: **61**
 
 | 날짜 | 플랫폼 | 문제 | URL |
 |---|---|---|---|
@@ -67,3 +67,4 @@
 | 10-14 | LTC | Longest Increasing Sequence | https://leetcode.com/problems/longest-increasing-subsequence/description/ |
 | 10-15 | PGS | 뒤에 있는 큰 수 찾기 | https://school.programmers.co.kr/learn/courses/30/lessons/154539 |
 | 10-16 | PGS | 상담원 인원 | https://school.programmers.co.kr/learn/courses/30/lessons/214288 |
+| 10-20 | PGS | 경주로 건 | https://school.programmers.co.kr/learn/courses/30/lessons/67259 |
