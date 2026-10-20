@@ -98,8 +98,8 @@
 
 <br />
 
-### 🟨 10-20 데일리 문제
-[경주로 건설](https://school.programmers.co.kr/learn/courses/30/lessons/67259)
+### 🟨 10-21 데일리 문제
+[파도반 수열](https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AWD3Y27q3QIDFAUZ)
 
 <br />
 
