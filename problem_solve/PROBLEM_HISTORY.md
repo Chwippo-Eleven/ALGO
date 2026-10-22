@@ -3,7 +3,7 @@
 > 이 파일은 GitHub Actions가 자동으로 생성합니다.
 > 문제 중복 여부는 URL 기준으로 판단합니다.
 
-총 문제 수: **62**
+총 문제 수: **63**
 
 | 날짜 | 플랫폼 | 문제 | URL |
 |---|---|---|---|
@@ -69,3 +69,4 @@
 | 10-16 | PGS | 상담원 인원 | https://school.programmers.co.kr/learn/courses/30/lessons/214288 |
 | 10-20 | PGS | 경주로 건설 | https://school.programmers.co.kr/learn/courses/30/lessons/67259 |
 | 10-21 | SWEA | 파도반 수열 | https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AWD3Y27q3QIDFAUZ |
+| 10-22 | PGS | 불량 사용자 | https://school.programmers.co.kr/learn/courses/30/lessons/64064 |
