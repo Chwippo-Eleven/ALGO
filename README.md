@@ -98,8 +98,8 @@
 
 <br />
 
-### 🟨 10-22 데일리 문제
-[불량 사용자](https://school.programmers.co.kr/learn/courses/30/lessons/64064)
+### 🟨 10-23 데일리 문제
+[기울어진 직사각형](https://www.codetree.ai/ko/trails/complete/curated-cards/challenge-slanted-rectangle/description)
 
 <br />
 
