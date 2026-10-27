@@ -98,7 +98,7 @@
 
 <br />
 
-### 🟨 10-26 데일리 문제
+### 🟨 10-27 데일리 문제
 [빙하](https://www.codetree.ai/ko/trails/complete/curated-cards/challenge-glacier/description)
 
 <br />
