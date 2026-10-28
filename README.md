@@ -98,8 +98,8 @@
 
 <br />
 
-### 🟨 10-28 데일리 문제
-[징검다리 건너기](https://school.programmers.co.kr/learn/courses/30/lessons/64062)
+### 🟨 10-29 데일리 문제
+[K개의 벽 없애기](https://www.codetree.ai/ko/trails/complete/curated-cards/challenge-remove-k-walls/description)
 
 <br />
 
