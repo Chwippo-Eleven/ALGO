@@ -98,8 +98,8 @@
 
 <br />
 
-### 🟨 10-27 데일리 문제
-[빙하](https://www.codetree.ai/ko/trails/complete/curated-cards/challenge-glacier/description)
+### 🟨 10-28 데일리 문제
+[징검다리 건너기](https://school.programmers.co.kr/learn/courses/30/lessons/64062)
 
 <br />
 
