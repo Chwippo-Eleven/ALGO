@@ -98,8 +98,8 @@
 
 <br />
 
-### 🟨 10-29 데일리 문제
-[K개의 벽 없애기](https://www.codetree.ai/ko/trails/complete/curated-cards/challenge-remove-k-walls/description)
+### 🟨 11-02 데일리 문제
+[문자열 압축](https://school.programmers.co.kr/learn/courses/30/lessons/60057)
 
 <br />
 
