@@ -3,7 +3,7 @@
 > 이 파일은 GitHub Actions가 자동으로 생성합니다.
 > 문제 중복 여부는 URL 기준으로 판단합니다.
 
-총 문제 수: **68**
+총 문제 수: **69**
 
 | 날짜 | 플랫폼 | 문제 | URL |
 |---|---|---|---|
@@ -75,3 +75,4 @@
 | 10-27 | ETC | 빙하 | https://www.codetree.ai/ko/trails/complete/curated-cards/challenge-glacier/description |
 | 10-28 | PGS | 징검다리 건너기 | https://school.programmers.co.kr/learn/courses/30/lessons/64062 |
 | 10-29 | ETC | K개의 벽 없애기 | https://www.codetree.ai/ko/trails/complete/curated-cards/challenge-remove-k-walls/description |
+| 11-02 | PGS | 문자열 압축 | https://school.programmers.co.kr/learn/courses/30/lessons/60057 |
