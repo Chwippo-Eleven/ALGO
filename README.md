@@ -98,8 +98,8 @@
 
 <br />
 
-### 🟨 11-03 데일리 문제
-[추억의 2048 게임](https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AWbrg9uabZsDFAWQ)
+### 🟨 11-04 데일리 문제
+[여행 경로](https://school.programmers.co.kr/learn/courses/30/lessons/43164)
 
 <br />
 
