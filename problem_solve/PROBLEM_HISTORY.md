@@ -3,7 +3,7 @@
 > 이 파일은 GitHub Actions가 자동으로 생성합니다.
 > 문제 중복 여부는 URL 기준으로 판단합니다.
 
-총 문제 수: **70**
+총 문제 수: **71**
 
 | 날짜 | 플랫폼 | 문제 | URL |
 |---|---|---|---|
@@ -77,3 +77,4 @@
 | 10-29 | ETC | K개의 벽 없애기 | https://www.codetree.ai/ko/trails/complete/curated-cards/challenge-remove-k-walls/description |
 | 11-02 | PGS | 문자열 압축 | https://school.programmers.co.kr/learn/courses/30/lessons/60057 |
 | 11-03 | SWEA | 추억의 2048 게임 | https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AWbrg9uabZsDFAWQ |
+| 11-04 | PGS | 여행 경로 | https://school.programmers.co.kr/learn/courses/30/lessons/43164 |
