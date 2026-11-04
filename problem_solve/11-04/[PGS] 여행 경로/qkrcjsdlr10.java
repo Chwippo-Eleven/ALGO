@@ -38,10 +38,21 @@ class Solution {
             if(!check){
                 String[] temp = cur.path.toArray(new String[0]);
 
-                if(answer.length == 0 ||
-                        String.join(",", temp).compareTo(String.join(",", answer)) < 0){
+                if(answer.length == 0){
                     answer = temp;
+                }else{
+                    for(int i = 0; i < temp.length; i++){
+                        int cmp = temp[i].compareTo(answer[i]);
+
+                        if(cmp < 0){
+                            answer = temp;
+                            break;
+                        }
+
+                        if(cmp > 0) break;
+                    }
                 }
+
                 continue;
             }
 
