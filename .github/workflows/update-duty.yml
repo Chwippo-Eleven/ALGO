@@ -25,7 +25,9 @@ concurrency:
 
 jobs:
   update-duty:
-    if: github.repository == 'Chwippo-Eleven/ALGO'
+    if: >
+      github.repository == 'Chwippo-Eleven/ALGO' &&
+      (github.event_name != 'push' || github.actor != 'github-actions[bot]')
 
     runs-on: ubuntu-latest
     timeout-minutes: 5
