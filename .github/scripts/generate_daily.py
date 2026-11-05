@@ -2,17 +2,20 @@ from __future__ import annotations
 
 from datetime import date, datetime, timedelta
 from pathlib import Path
-from zoneinfo import ZoneInfo
+from typing import Iterable
 from urllib.parse import urlsplit, urlunsplit
+from zoneinfo import ZoneInfo
+
+import json
 import os
 import re
 import sys
-from typing import Iterable
 
 
 ROOT_README = Path("README.md")
 TARGET_ROOT = Path("problem_solve")
 HISTORY_FILE = TARGET_ROOT / "PROBLEM_HISTORY.md"
+DUTY_CONFIG_FILE = Path("problem-duty.json")
 
 DEFAULT_LANGUAGES = ["java"]
 
@@ -28,7 +31,6 @@ LANG_EXTENSIONS = {
     "kotlin": "kt",
 }
 
-
 DAILY_BLOCK_PATTERN = re.compile(
     r"^###\s*🟨\s*(?P<title>.+?)\s*데일리\s*문제\s*$"
     r"(?P<body>[\s\S]*?)"
@@ -36,13 +38,11 @@ DAILY_BLOCK_PATTERN = re.compile(
     re.MULTILINE,
 )
 
-
 MARKDOWN_LINK_PATTERN = re.compile(
     r"^(?:[-*]\s*)?"
     r"\[(?P<title>[^\]]+)\]"
     r"\((?P<url>[^)]+)\)\s*$"
 )
-
 
 MARKDOWN_LINK_FIND_PATTERN = re.compile(
     r"\[(?P<title>[^\]]+)\]"
@@ -53,60 +53,42 @@ DAILY_DATE_PATTERN = re.compile(
     r"^(?P<month>\d{2})-(?P<day>\d{2})$"
 )
 
+MONTH_FOLDER_PATTERN = re.compile(
+    r"^(?P<year>\d{4})-(?P<month>\d{2})$"
+)
+
 KST = ZoneInfo("Asia/Seoul")
+
 
 def sanitize(name: str) -> str:
     invalid = r'<>:"/\\|?*'
-
     for character in invalid:
         name = name.replace(character, "-")
-
     name = re.sub(r"\s+", " ", name).strip()
-
     return name.rstrip(".")
 
 
 def normalize_problem_url(url: str) -> str:
-    """
-    같은 문제 URL이 아래처럼 조금 다르게 들어와도 동일하게 판단한다.
-
-    https://www.acmicpc.net/problem/1000
-    https://www.acmicpc.net/problem/1000/
-
-    fragment(#...)는 제거한다.
-    http/https 차이도 동일하게 보기 위해 https로 통일한다.
-    """
-
+    """URL 끝의 슬래시, fragment, http/https 차이를 정규화한다."""
     url = url.strip()
-
     parsed = urlsplit(url)
 
     if not parsed.netloc:
         return url.rstrip("/")
 
-    host = parsed.netloc.lower()
-
-    path = parsed.path.rstrip("/")
-
-    if not path:
-        path = "/"
-
-    normalized = urlunsplit(
+    path = parsed.path.rstrip("/") or "/"
+    return urlunsplit(
         (
             "https",
-            host,
+            parsed.netloc.lower(),
             path,
             parsed.query,
             "",
         )
     )
 
-    return normalized
 
-
-def extract_daily_blocks(
-    text: str,
-) -> list[tuple[str, str]]:
+def extract_daily_blocks(text: str) -> list[tuple[str, str]]:
     blocks = [
         (
             match.group("title").strip(),
@@ -117,44 +99,34 @@ def extract_daily_blocks(
 
     if not blocks:
         raise ValueError(
-            "README에서 "
-            "'### 🟨 {날짜 또는 회차} 데일리 문제' "
-            "형식의 블록을 찾지 못했습니다."
+            "README에서 '### 🟨 {날짜} 데일리 문제' 형식의 블록을 찾지 못했습니다."
         )
 
     return blocks
 
 
-def extract_links(
-    body: str,
-) -> list[tuple[str, str]]:
+def extract_links(body: str) -> list[tuple[str, str]]:
     links: list[tuple[str, str]] = []
 
     for line in body.splitlines():
-        match = MARKDOWN_LINK_PATTERN.match(
-            line.strip()
-        )
-
-        if not match:
-            continue
-
-        title = match.group("title").strip()
-        url = match.group("url").strip()
-
-        links.append((title, url))
+        match = MARKDOWN_LINK_PATTERN.match(line.strip())
+        if match:
+            links.append(
+                (
+                    match.group("title").strip(),
+                    match.group("url").strip(),
+                )
+            )
 
     if not links:
         raise ValueError(
-            "데일리 문제 블록에서 "
-            "문제 링크를 찾지 못했습니다."
+            "데일리 문제 블록에서 문제 링크를 찾지 못했습니다."
         )
 
     return links
 
 
-def extract_all_links(
-    text: str,
-) -> list[tuple[str, str]]:
+def extract_all_links(text: str) -> list[tuple[str, str]]:
     return [
         (
             match.group("title").strip(),
@@ -164,23 +136,15 @@ def extract_all_links(
     ]
 
 
-def detect_platform_tag(
-    url: str,
-) -> str:
+def detect_platform_tag(url: str) -> str:
     lower_url = url.lower()
 
     if "acmicpc.net" in lower_url:
         return "BOJ"
-
-    if (
-        "programmers.co.kr" in lower_url
-        or "school.programmers.co.kr" in lower_url
-    ):
+    if "programmers.co.kr" in lower_url:
         return "PGS"
-
     if "swexpertacademy.com" in lower_url:
         return "SWEA"
-
     if "leetcode.com" in lower_url:
         return "LTC"
 
@@ -191,12 +155,8 @@ def build_problem_folder_name(
     problem_title: str,
     problem_url: str,
 ) -> str:
-    platform = detect_platform_tag(
-        problem_url
-    )
-
     return sanitize(
-        f"[{platform}] {problem_title}"
+        f"[{detect_platform_tag(problem_url)}] {problem_title}"
     )
 
 
@@ -212,12 +172,9 @@ def build_daily_readme(
     ]
 
     for problem_title, problem_url in links:
-        lines.append(
-            f"- [{problem_title}]({problem_url})"
-        )
+        lines.append(f"- [{problem_title}]({problem_url})")
 
     lines.append("")
-
     return "\n".join(lines)
 
 
@@ -231,129 +188,53 @@ def build_problem_readme(
     )
 
 
-def collect_problem_history() -> dict[
-    str,
-    list[dict[str, str]]
-]:
+def resolve_daily_date(
+    daily_title: str,
+    today: date | None = None,
+) -> date:
     """
-    problem_solve/{날짜}/README.md 를 읽어
-    URL 기준으로 기존 풀이 이력을 만든다.
-
-    problem_solve 하위의 바로 한 단계 README만 읽으므로
-    각 문제 폴더 내부 README는 검사하지 않는다.
+    MM-DD를 실제 날짜로 변환한다.
+    연초에 12월 날짜가 입력된 경우 전년도 날짜로 판단한다.
     """
+    current_date = today or datetime.now(KST).date()
+    safe_title = sanitize(daily_title)
+    match = DAILY_DATE_PATTERN.fullmatch(safe_title)
 
-    history: dict[
-        str,
-        list[dict[str, str]]
-    ] = {}
-
-    if not TARGET_ROOT.exists():
-        return history
-
-    for daily_readme in sorted(
-        TARGET_ROOT.glob("*/README.md")
-    ):
-        daily_title = daily_readme.parent.name
-
-        text = daily_readme.read_text(
-            encoding="utf-8"
+    if not match:
+        raise ValueError(
+            f"데일리 문제 날짜는 MM-DD 형식이어야 합니다: {daily_title}"
         )
 
-        links = extract_all_links(text)
+    month = int(match.group("month"))
+    day = int(match.group("day"))
 
-        for problem_title, problem_url in links:
-            normalized_url = normalize_problem_url(
-                problem_url
-            )
+    try:
+        target_date = date(current_date.year, month, day)
+    except ValueError as error:
+        raise ValueError(
+            f"올바르지 않은 데일리 날짜입니다: {daily_title}"
+        ) from error
 
-            history.setdefault(
-                normalized_url,
-                [],
-            ).append(
-                {
-                    "date": daily_title,
-                    "title": problem_title,
-                    "url": problem_url,
-                }
-            )
+    if target_date > current_date + timedelta(days=45):
+        target_date = date(current_date.year - 1, month, day)
 
-    return history
+    return target_date
+
 
 def validate_daily_dates(
     blocks: list[tuple[str, str]],
 ) -> None:
-    """
-    README의 데일리 날짜가 KST 기준 과거이면 실패시킨다.
-
-    예:
-        오늘 09-16
-        09-15 -> 실패
-        09-16 -> 허용
-        09-17 -> 허용
-    """
-
-    today = datetime.now(
-        KST
-    ).date()
+    today = datetime.now(KST).date()
 
     for daily_title, _ in blocks:
-
-        safe_title = sanitize(
-            daily_title
-        )
-
-        match = DAILY_DATE_PATTERN.fullmatch(
-            safe_title
-        )
-
-        if not match:
-            raise ValueError(
-                "데일리 문제 날짜는 "
-                "MM-DD 형식이어야 합니다: "
-                f"{daily_title}"
-            )
-
-        month = int(
-            match.group("month")
-        )
-
-        day = int(
-            match.group("day")
-        )
-
-        try:
-            target_date = date(
-                today.year,
-                month,
-                day,
-            )
-
-        except ValueError as error:
-            raise ValueError(
-                "올바르지 않은 데일리 날짜입니다: "
-                f"{daily_title}"
-            ) from error
-
-        # 연초에 12월 날짜를 입력한 경우
-        # 전년도 날짜로 판단한다.
-        if (
-            target_date
-            > today + timedelta(days=45)
-        ):
-            target_date = date(
-                today.year - 1,
-                month,
-                day,
-            )
+        target_date = resolve_daily_date(daily_title, today)
 
         if target_date < today:
             raise ValueError(
-                "과거 날짜에는 데일리 문제를 "
-                "생성할 수 없습니다. "
-                f"입력 날짜: {daily_title}, "
-                f"오늘: {today:%m-%d}"
+                "과거 날짜에는 데일리 문제를 생성할 수 없습니다. "
+                f"입력 날짜: {daily_title}, 오늘: {today:%m-%d}"
             )
+
 
 def validate_daily_titles(
     blocks: list[tuple[str, str]],
@@ -361,135 +242,157 @@ def validate_daily_titles(
     seen: set[str] = set()
 
     for daily_title, _ in blocks:
-        safe_title = sanitize(
-            daily_title
-        )
+        safe_title = sanitize(daily_title)
 
         if safe_title in seen:
             raise ValueError(
-                "README에 동일한 데일리 제목이 "
-                f"두 번 존재합니다: {daily_title}"
+                f"README에 동일한 데일리 제목이 두 번 존재합니다: {daily_title}"
             )
 
         seen.add(safe_title)
 
 
+def daily_date_from_path(daily_readme: Path) -> date:
+    """
+    기존 problem_solve/MM-DD와 신규 problem_solve/YYYY-MM/MM-DD
+    구조를 모두 지원한다.
+    """
+    daily_title = daily_readme.parent.name
+    month_folder = daily_readme.parent.parent.name
+
+    if daily_readme.parent.parent == TARGET_ROOT:
+        # 기존 폴더에는 연도 정보가 없으므로 현재 날짜 규칙으로 추정한다.
+        return resolve_daily_date(daily_title)
+
+    month_match = MONTH_FOLDER_PATTERN.fullmatch(month_folder)
+    if not month_match:
+        raise ValueError(
+            f"월별 폴더명이 YYYY-MM 형식이 아닙니다: {month_folder}"
+        )
+
+    daily_match = DAILY_DATE_PATTERN.fullmatch(daily_title)
+    if not daily_match:
+        raise ValueError(
+            f"데일리 폴더명이 MM-DD 형식이 아닙니다: {daily_title}"
+        )
+
+    year = int(month_match.group("year"))
+    month = int(month_match.group("month"))
+    day = int(daily_match.group("day"))
+
+    if month != int(daily_match.group("month")):
+        raise ValueError(
+            f"월별 폴더와 데일리 날짜가 일치하지 않습니다: "
+            f"{month_folder}/{daily_title}"
+        )
+
+    try:
+        return date(year, month, day)
+    except ValueError as error:
+        raise ValueError(
+            f"올바르지 않은 날짜 폴더입니다: {month_folder}/{daily_title}"
+        ) from error
+
+
+def iter_daily_readmes() -> list[Path]:
+    """
+    기존 1단계 날짜 폴더와 신규 2단계 월/날짜 폴더의
+    데일리 README만 수집한다. 문제 폴더 내부 README는 읽지 않는다.
+    """
+    if not TARGET_ROOT.exists():
+        return []
+
+    daily_readmes = set(TARGET_ROOT.glob("*/README.md"))
+    daily_readmes.update(TARGET_ROOT.glob("*/*/README.md"))
+
+    return sorted(daily_readmes)
+
+
+def collect_problem_history() -> dict[str, list[dict[str, str]]]:
+    history: dict[str, list[dict[str, str]]] = {}
+    seen_records: set[tuple[str, str]] = set()
+
+    for daily_readme in iter_daily_readmes():
+        target_date = daily_date_from_path(daily_readme)
+        date_key = target_date.isoformat()
+        text = daily_readme.read_text(encoding="utf-8")
+
+        for problem_title, problem_url in extract_all_links(text):
+            normalized_url = normalize_problem_url(problem_url)
+            record_key = (date_key, normalized_url)
+
+            # 구형/신형 폴더에 동일 날짜의 기록이 함께 있어도 중복 집계하지 않는다.
+            if record_key in seen_records:
+                continue
+
+            seen_records.add(record_key)
+            history.setdefault(normalized_url, []).append(
+                {
+                    "date": date_key,
+                    "title": problem_title,
+                    "url": problem_url,
+                }
+            )
+
+    return history
+
+
 def find_duplicate_problems(
     blocks: list[tuple[str, str]],
-    history: dict[
-        str,
-        list[dict[str, str]]
-    ],
+    history: dict[str, list[dict[str, str]]],
 ) -> list[dict[str, str]]:
     duplicates: list[dict[str, str]] = []
-
-    # 이번 README 변경에서 새로 추가된 문제끼리도
-    # 중복인지 확인한다.
-    current_urls: dict[
-        str,
-        dict[str, str]
-    ] = {}
+    current_urls: dict[str, dict[str, str]] = {}
 
     for daily_title, daily_body in blocks:
-        safe_daily_title = sanitize(
-            daily_title
-        )
+        current_date = resolve_daily_date(daily_title).isoformat()
 
-        links = extract_links(
-            daily_body
-        )
+        for problem_title, problem_url in extract_links(daily_body):
+            normalized_url = normalize_problem_url(problem_url)
 
-        for problem_title, problem_url in links:
-            normalized_url = normalize_problem_url(
-                problem_url
-            )
-
-            # -----------------------------------
-            # 기존 problem_solve 기록과 비교
-            # -----------------------------------
-            previous_records = history.get(
-                normalized_url,
-                [],
-            )
-
-            for previous in previous_records:
-                # 같은 날짜의 자기 자신의 기록은
-                # 중복으로 판단하지 않는다.
-                if (
-                    previous["date"]
-                    == safe_daily_title
-                ):
+            for previous in history.get(normalized_url, []):
+                if previous["date"] == current_date:
                     continue
 
                 duplicates.append(
                     {
                         "title": problem_title,
                         "url": problem_url,
-                        "current_date": (
-                            safe_daily_title
-                        ),
-                        "previous_date": (
-                            previous["date"]
-                        ),
-                        "previous_title": (
-                            previous["title"]
-                        ),
+                        "current_date": current_date,
+                        "previous_date": previous["date"],
+                        "previous_title": previous["title"],
                     }
                 )
 
-            # -----------------------------------
-            # 이번 README 내부에서 중복 검사
-            # -----------------------------------
-            current_previous = current_urls.get(
-                normalized_url
-            )
-
+            current_previous = current_urls.get(normalized_url)
             if current_previous:
                 duplicates.append(
                     {
                         "title": problem_title,
                         "url": problem_url,
-                        "current_date": (
-                            safe_daily_title
-                        ),
-                        "previous_date": (
-                            current_previous[
-                                "date"
-                            ]
-                        ),
-                        "previous_title": (
-                            current_previous[
-                                "title"
-                            ]
-                        ),
+                        "current_date": current_date,
+                        "previous_date": current_previous["date"],
+                        "previous_title": current_previous["title"],
                     }
                 )
             else:
-                current_urls[
-                    normalized_url
-                ] = {
-                    "date": safe_daily_title,
+                current_urls[normalized_url] = {
+                    "date": current_date,
                     "title": problem_title,
                 }
 
-    return remove_duplicate_reports(
-        duplicates
-    )
+    return remove_duplicate_reports(duplicates)
 
 
 def remove_duplicate_reports(
     duplicates: list[dict[str, str]],
 ) -> list[dict[str, str]]:
     result: list[dict[str, str]] = []
-    seen: set[
-        tuple[str, str, str]
-    ] = set()
+    seen: set[tuple[str, str, str]] = set()
 
     for duplicate in duplicates:
         key = (
-            normalize_problem_url(
-                duplicate["url"]
-            ),
+            normalize_problem_url(duplicate["url"]),
             duplicate["current_date"],
             duplicate["previous_date"],
         )
@@ -503,9 +406,7 @@ def remove_duplicate_reports(
     return result
 
 
-def escape_github_annotation(
-    text: str,
-) -> str:
+def escape_github_annotation(text: str) -> str:
     return (
         text.replace("%", "%25")
         .replace("\r", "%0D")
@@ -513,83 +414,21 @@ def escape_github_annotation(
     )
 
 
-def markdown_escape(
-    text: str,
-) -> str:
+def markdown_escape(text: str) -> str:
     return text.replace("|", "\\|")
-
-
-def report_duplicates(
-    duplicates: list[dict[str, str]],
-) -> None:
-    print()
-    print("=" * 70)
-    print("❌ 중복 문제가 발견되었습니다.")
-    print("=" * 70)
-
-    for duplicate in duplicates:
-        print()
-        print(
-            f"문제: {duplicate['title']}"
-        )
-        print(
-            f"URL: {duplicate['url']}"
-        )
-        print(
-            "현재 데일리: "
-            f"{duplicate['current_date']}"
-        )
-        print(
-            "이전 풀이: "
-            f"{duplicate['previous_date']}"
-        )
-        print()
-        print(
-            "이전에 푼 적 있는 문제입니다. "
-            "다른 문제로 부탁드립니다!"
-        )
-
-        annotation_message = (
-            f"{duplicate['title']} | "
-            f"URL: {duplicate['url']} | "
-            f"이전 풀이: "
-            f"{duplicate['previous_date']} | "
-            "이전에 푼 적 있는 문제입니다. "
-            "다른 문제로 부탁드립니다!"
-        )
-
-        print(
-            "::error title=중복 문제 발견::"
-            + escape_github_annotation(
-                annotation_message
-            )
-        )
-
-    print()
-    print("=" * 70)
-
-    write_duplicate_summary(
-        duplicates
-    )
 
 
 def write_duplicate_summary(
     duplicates: list[dict[str, str]],
 ) -> None:
-    summary_path = os.getenv(
-        "GITHUB_STEP_SUMMARY"
-    )
-
+    summary_path = os.getenv("GITHUB_STEP_SUMMARY")
     if not summary_path:
         return
 
     lines = [
         "# ❌ 중복 문제 발견",
         "",
-        (
-            "이전에 푼 적 있는 문제입니다. "
-            "**다른 문제로 부탁드립니다!**"
-        ),
+        "이전에 푼 적 있는 문제입니다. **다른 문제로 부탁드립니다!**",
         "",
         "| 문제 | 현재 데일리 | 이전 풀이 | URL |",
         "|---|---|---|---|",
@@ -598,84 +437,84 @@ def write_duplicate_summary(
     for duplicate in duplicates:
         lines.append(
             "| "
-            + markdown_escape(
-                duplicate["title"]
-            )
+            + markdown_escape(duplicate["title"])
             + " | "
-            + markdown_escape(
-                duplicate["current_date"]
-            )
+            + markdown_escape(duplicate["current_date"])
             + " | "
-            + markdown_escape(
-                duplicate["previous_date"]
-            )
+            + markdown_escape(duplicate["previous_date"])
             + " | "
-            + markdown_escape(
-                duplicate["url"]
-            )
+            + markdown_escape(duplicate["url"])
             + " |"
         )
 
     lines.append("")
+    with open(summary_path, "a", encoding="utf-8") as summary:
+        summary.write("\n".join(lines))
 
-    with open(
-        summary_path,
-        "a",
-        encoding="utf-8",
-    ) as summary:
-        summary.write(
-            "\n".join(lines)
+
+def report_duplicates(
+    duplicates: list[dict[str, str]],
+) -> None:
+    print("\n" + "=" * 70)
+    print("❌ 중복 문제가 발견되었습니다.")
+    print("=" * 70)
+
+    for duplicate in duplicates:
+        print()
+        print(f"문제: {duplicate['title']}")
+        print(f"URL: {duplicate['url']}")
+        print(f"현재 데일리: {duplicate['current_date']}")
+        print(f"이전 풀이: {duplicate['previous_date']}")
+        print("이전에 푼 적 있는 문제입니다. 다른 문제로 부탁드립니다!")
+
+        annotation_message = (
+            f"{duplicate['title']} | URL: {duplicate['url']} | "
+            f"이전 풀이: {duplicate['previous_date']} | "
+            "이전에 푼 적 있는 문제입니다. 다른 문제로 부탁드립니다!"
         )
+        print(
+            "::error title=중복 문제 발견::"
+            + escape_github_annotation(annotation_message)
+        )
+
+    print("\n" + "=" * 70)
+    write_duplicate_summary(duplicates)
 
 
 def build_history_markdown() -> str:
-    """
-    날짜별 README를 다시 읽어
-    PROBLEM_HISTORY.md를 생성한다.
-    """
+    rows: list[tuple[str, str, str, str]] = []
+    seen_records: set[tuple[str, str]] = set()
 
-    rows: list[
-        tuple[str, str, str, str]
-    ] = []
+    for daily_readme in iter_daily_readmes():
+        target_date = daily_date_from_path(daily_readme)
+        date_key = target_date.isoformat()
+        text = daily_readme.read_text(encoding="utf-8")
 
-    if TARGET_ROOT.exists():
-        for daily_readme in sorted(
-            TARGET_ROOT.glob("*/README.md")
-        ):
-            daily_title = (
-                daily_readme.parent.name
+        for problem_title, problem_url in extract_all_links(text):
+            record_key = (
+                date_key,
+                normalize_problem_url(problem_url),
             )
+            if record_key in seen_records:
+                continue
 
-            text = daily_readme.read_text(
-                encoding="utf-8"
-            )
-
-            for (
-                problem_title,
-                problem_url,
-            ) in extract_all_links(text):
-                rows.append(
-                    (
-                        daily_title,
-                        detect_platform_tag(
-                            problem_url
-                        ),
-                        problem_title,
-                        problem_url,
-                    )
+            seen_records.add(record_key)
+            rows.append(
+                (
+                    date_key,
+                    detect_platform_tag(problem_url),
+                    problem_title,
+                    problem_url,
                 )
+            )
+
+    rows.sort(key=lambda row: (row[0], row[2]))
 
     lines = [
         "# 문제 풀이 이력",
         "",
-        (
-            "> 이 파일은 GitHub Actions가 "
-            "자동으로 생성합니다."
-        ),
-        (
-            "> 문제 중복 여부는 URL 기준으로 "
-            "판단합니다."
-        ),
+        "> 이 파일은 GitHub Actions가 자동으로 생성합니다.",
+        "> 문제 중복 여부는 URL 기준으로 판단합니다.",
         "",
         f"총 문제 수: **{len(rows)}**",
         "",
@@ -683,15 +522,10 @@ def build_history_markdown() -> str:
         "|---|---|---|---|",
     ]
 
-    for (
-        daily_title,
-        platform,
-        problem_title,
-        problem_url,
-    ) in rows:
+    for daily_date, platform, problem_title, problem_url in rows:
         lines.append(
             "| "
-            + markdown_escape(daily_title)
+            + markdown_escape(daily_date)
             + " | "
             + markdown_escape(platform)
             + " | "
@@ -702,60 +536,34 @@ def build_history_markdown() -> str:
         )
 
     lines.append("")
-
     return "\n".join(lines)
 
 
-def write_if_changed(
-    path: Path,
-    content: str,
-) -> bool:
-    path.parent.mkdir(
-        parents=True,
-        exist_ok=True,
-    )
+def write_if_changed(path: Path, content: str) -> bool:
+    path.parent.mkdir(parents=True, exist_ok=True)
 
     if path.exists():
-        old_content = path.read_text(
-            encoding="utf-8"
-        )
-
+        old_content = path.read_text(encoding="utf-8")
         if old_content == content:
             return False
 
-    path.write_text(
-        content,
-        encoding="utf-8",
-    )
-
+    path.write_text(content, encoding="utf-8")
     return True
 
 
-def ensure_file(
-    path: Path,
-    content: str = "",
-) -> bool:
-    path.parent.mkdir(
-        parents=True,
-        exist_ok=True,
-    )
+def ensure_file(path: Path, content: str = "") -> bool:
+    path.parent.mkdir(parents=True, exist_ok=True)
 
     if path.exists():
         return False
 
-    path.write_text(
-        content,
-        encoding="utf-8",
-    )
-
+    path.write_text(content, encoding="utf-8")
     return True
 
 
-def extract_member_section(
-    text: str,
-) -> str:
+def extract_member_section(text: str) -> str:
     tables = re.findall(
-        r"<table>([\s\S]*?)</table>",
+        r"<table\b[^>]*>([\s\S]*?)</table>",
         text,
         re.IGNORECASE,
     )
@@ -765,193 +573,27 @@ def extract_member_section(
             return table
 
     raise ValueError(
-        "README에서 GitHub 링크가 포함된 "
-        "스터디 멤버 테이블을 찾지 못했습니다."
+        "README에서 GitHub 링크가 포함된 스터디 멤버 테이블을 찾지 못했습니다."
     )
 
 
-def extract_members(
-    member_section: str,
-) -> list[dict[str, object]]:
-    cells = re.findall(
-        r"<td\b[^>]*>[\s\S]*?</td>",
-        member_section,
-        re.IGNORECASE,
-    )
-
-    usernames: list[str] = []
-
-    for cell in cells:
-        match = re.search(
-            r"github\.com/"
-            r"([^\"'/<>?#]+)",
-            cell,
-            re.IGNORECASE,
-        )
-
-        if not match:
-            continue
-
-        username = match.group(1)
-
-        if username not in usernames:
-            usernames.append(username)
-
-    if not usernames:
-        raise ValueError(
-            "스터디 멤버 테이블에서 "
-            "GitHub 사용자명을 찾지 못했습니다."
-        )
-
-    language_cells = find_language_cells(
-        member_section
-    )
-
-    members: list[
-        dict[str, object]
-    ] = []
-
-    for index, username in enumerate(
-        usernames
-    ):
-        languages: list[str] = []
-
-        if index < len(language_cells):
-            languages = (
-                extract_languages_from_cell(
-                    language_cells[index]
-                )
-            )
-
-        if not languages:
-            languages = (
-                DEFAULT_LANGUAGES.copy()
-            )
-
-            print(
-                f"경고: {username}의 언어 정보가 없어 "
-                f"{', '.join(DEFAULT_LANGUAGES)} "
-                "사용"
-            )
-
-        members.append(
-            {
-                "username": username,
-                "languages": languages,
-            }
-        )
-
-    return members
-
-
-def find_language_cells(
-    member_section: str,
-) -> list[str]:
-    rows = re.findall(
-        r"<tr\b[^>]*>"
-        r"([\s\S]*?)"
-        r"</tr>",
-        member_section,
-        re.IGNORECASE,
-    )
-
-    for row in rows:
-        cells = re.findall(
-            r"<td\b[^>]*>"
-            r"[\s\S]*?"
-            r"</td>",
-            row,
-            re.IGNORECASE,
-        )
-
-        if not cells:
-            continue
-
-        if any(
-            extract_languages_from_cell(
-                cell
-            )
-            for cell in cells
-        ):
-            return cells
-
-    return []
-
-
-def extract_languages_from_cell(
-    cell_html: str,
-) -> list[str]:
+def extract_languages_from_cell(cell_html: str) -> list[str]:
     languages: list[str] = []
-
-    data_match = re.search(
-        r"data-languages?="
-        r"[\"']([^\"']+)[\"']",
-        cell_html,
-        re.IGNORECASE,
-    )
-
-    if data_match:
-        candidates = re.split(
-            r"[,\s]+",
-            data_match.group(1),
-        )
-
-        for candidate in candidates:
-            language = (
-                normalize_language_name(
-                    candidate
-                )
-            )
-
-            if (
-                language
-                and language not in languages
-            ):
-                languages.append(language)
-
     badge_matches = re.findall(
-        r"badge/([^?\-\s]+)-",
+        r"badge/([^?/\-\s]+)-",
         cell_html,
         re.IGNORECASE,
     )
 
     for badge in badge_matches:
-        language = normalize_language_name(
-            badge
-        )
-
-        if (
-            language
-            and language not in languages
-        ):
-            languages.append(language)
-
-    plain_text = re.sub(
-        r"<[^>]+>",
-        " ",
-        cell_html,
-    )
-
-    for candidate in re.split(
-        r"[,/\s]+",
-        plain_text,
-    ):
-        language = normalize_language_name(
-            candidate
-        )
-
-        if (
-            language
-            and language not in languages
-        ):
+        language = normalize_language_name(badge)
+        if language and language not in languages:
             languages.append(language)
 
     return languages
 
 
-def normalize_language_name(
-    raw: str,
-) -> str | None:
+def normalize_language_name(raw: str) -> str | None:
     normalized = raw.strip().lower()
 
     mapping = {
@@ -973,30 +615,187 @@ def normalize_language_name(
     return mapping.get(normalized)
 
 
-def build_code_template(
-    username: str,
-    language: str,
-) -> str:
+def find_language_cells(member_section: str) -> list[str]:
+    """
+    README 멤버 테이블의 언어 행을 모두 수집한다.
+    멤버가 5명씩 여러 행으로 나뉘어 있어도 언어 정보가 누락되지 않는다.
+    """
+    language_cells: list[str] = []
+    rows = re.findall(
+        r"<tr\b[^>]*>([\s\S]*?)</tr>",
+        member_section,
+        re.IGNORECASE,
+    )
+
+    for row in rows:
+        cells = re.findall(
+            r"<td\b[^>]*>[\s\S]*?</td>",
+            row,
+            re.IGNORECASE,
+        )
+
+        if cells and any(
+            extract_languages_from_cell(cell)
+            for cell in cells
+        ):
+            language_cells.extend(cells)
+
+    return language_cells
+
+
+def extract_members(
+    member_section: str,
+) -> list[dict[str, object]]:
+    cells = re.findall(
+        r"<td\b[^>]*>[\s\S]*?</td>",
+        member_section,
+        re.IGNORECASE,
+    )
+
+    usernames: list[str] = []
+
+    for cell in cells:
+        match = re.search(
+            r"github\.com/([^\"'/<>?#]+)",
+            cell,
+            re.IGNORECASE,
+        )
+        if not match:
+            continue
+
+        username = match.group(1).strip()
+        if username and username.casefold() not in {
+            existing.casefold() for existing in usernames
+        }:
+            usernames.append(username)
+
+    if not usernames:
+        raise ValueError(
+            "스터디 멤버 테이블에서 GitHub 사용자명을 찾지 못했습니다."
+        )
+
+    language_cells = find_language_cells(member_section)
+    members: list[dict[str, object]] = []
+
+    for index, username in enumerate(usernames):
+        languages: list[str] = []
+
+        if index < len(language_cells):
+            languages = extract_languages_from_cell(
+                language_cells[index]
+            )
+
+        if not languages:
+            languages = DEFAULT_LANGUAGES.copy()
+            print(
+                f"경고: {username}의 언어 정보가 없어 "
+                f"{', '.join(DEFAULT_LANGUAGES)} 사용"
+            )
+
+        members.append(
+            {
+                "username": username,
+                "languages": languages,
+            }
+        )
+
+    return members
+
+
+def load_duty_order() -> list[str]:
+    """problem-duty.json의 order를 실제 코드 파일 생성 대상자로 사용한다."""
+    try:
+        config = json.loads(
+            DUTY_CONFIG_FILE.read_text(encoding="utf-8")
+        )
+    except (OSError, json.JSONDecodeError) as error:
+        raise ValueError(
+            f"problem-duty.json을 읽을 수 없습니다: {error}"
+        ) from error
+
+    if not isinstance(config, dict):
+        raise ValueError(
+            "problem-duty.json의 최상위 값은 객체여야 합니다."
+        )
+
+    order = config.get("order")
+    if not isinstance(order, list):
+        raise ValueError(
+            "problem-duty.json에 멤버 목록인 'order' 배열이 없습니다."
+        )
+
+    usernames: list[str] = []
+    seen: set[str] = set()
+
+    for value in order:
+        if not isinstance(value, str) or not value.strip():
+            raise ValueError(
+                "problem-duty.json의 order에는 "
+                "비어 있지 않은 GitHub 사용자명만 입력할 수 있습니다."
+            )
+
+        username = value.strip()
+        normalized = username.casefold()
+
+        if normalized not in seen:
+            seen.add(normalized)
+            usernames.append(username)
+
+    if not usernames:
+        raise ValueError(
+            "problem-duty.json의 order에 등록된 멤버가 없습니다."
+        )
+
+    return usernames
+
+
+def select_duty_members(
+    members: list[dict[str, object]],
+    duty_order: list[str],
+) -> list[dict[str, object]]:
+    """JSON에 등록된 멤버만 선택하고 JSON의 순서를 유지한다."""
+    members_by_username = {
+        str(member["username"]).casefold(): member
+        for member in members
+    }
+
+    selected: list[dict[str, object]] = []
+
+    for username in duty_order:
+        member = members_by_username.get(username.casefold())
+
+        if member is None:
+            print(
+                f"경고: README에서 {username}을(를) 찾지 못해 "
+                "기본 언어(Java)를 사용합니다."
+            )
+            selected.append(
+                {
+                    "username": username,
+                    "languages": DEFAULT_LANGUAGES.copy(),
+                }
+            )
+        else:
+            selected.append(member)
+
+    return selected
+
+
+def build_code_template(username: str, language: str) -> str:
     if language == "java":
         return (
             "import java.io.*;\n"
             "import java.util.*;\n\n"
             "class Main {\n"
-            "    public static void main"
-            "(String[] args) "
-            "throws Exception {\n"
-            "        BufferedReader br = "
-            "new BufferedReader("
+            "    public static void main(String[] args) throws Exception {\n"
+            "        BufferedReader br = new BufferedReader("
             "new InputStreamReader(System.in));\n"
             "    }\n"
             "}\n"
         )
 
     if language == "swift":
-        return (
-            "import Foundation\n\n"
-            f"// {username}\n"
-        )
+        return f"import Foundation\n\n// {username}\n"
 
     if language == "python":
         return f"# {username}\n"
@@ -1021,15 +820,9 @@ def build_code_template(
         )
 
     if language == "kotlin":
-        return (
-            "fun main() {\n"
-            "}\n"
-        )
+        return "fun main() {\n}\n"
 
-    if language in {
-        "javascript",
-        "typescript",
-    }:
+    if language in {"javascript", "typescript"}:
         return f"// {username}\n"
 
     return ""
@@ -1040,66 +833,32 @@ def generate_daily_folder(
     links: list[tuple[str, str]],
     members: list[dict[str, object]],
 ) -> None:
-    safe_title = sanitize(
-        daily_title
-    )
-
+    safe_title = sanitize(daily_title)
     if not safe_title:
-        raise ValueError(
-            "데일리 문제 제목이 비어 있습니다."
-        )
+        raise ValueError("데일리 문제 제목이 비어 있습니다.")
 
-    daily_directory = (
-        TARGET_ROOT / safe_title
-    )
+    target_date = resolve_daily_date(daily_title)
+    month_directory = TARGET_ROOT / target_date.strftime("%Y-%m")
+    daily_directory = month_directory / safe_title
 
-    daily_directory.mkdir(
-        parents=True,
-        exist_ok=True,
-    )
+    daily_directory.mkdir(parents=True, exist_ok=True)
 
-    daily_readme = (
-        daily_directory / "README.md"
-    )
-
+    daily_readme = daily_directory / "README.md"
     if write_if_changed(
         daily_readme,
-        build_daily_readme(
-            daily_title,
-            links,
-        ),
+        build_daily_readme(daily_title, links),
     ):
-        print(
-            "데일리 README 생성/업데이트: "
-            f"{daily_readme}"
-        )
+        print(f"데일리 README 생성/업데이트: {daily_readme}")
 
-    for (
-        problem_title,
-        problem_url,
-    ) in links:
-        problem_folder_name = (
-            build_problem_folder_name(
-                problem_title,
-                problem_url,
-            )
+    for problem_title, problem_url in links:
+        problem_folder_name = build_problem_folder_name(
+            problem_title,
+            problem_url,
         )
+        problem_directory = daily_directory / problem_folder_name
+        problem_directory.mkdir(parents=True, exist_ok=True)
 
-        problem_directory = (
-            daily_directory
-            / problem_folder_name
-        )
-
-        problem_directory.mkdir(
-            parents=True,
-            exist_ok=True,
-        )
-
-        problem_readme = (
-            problem_directory
-            / "README.md"
-        )
-
+        problem_readme = problem_directory / "README.md"
         if write_if_changed(
             problem_readme,
             build_problem_readme(
@@ -1107,203 +866,96 @@ def generate_daily_folder(
                 problem_url,
             ),
         ):
-            print(
-                "문제 README 생성/업데이트: "
-                f"{problem_readme}"
-            )
+            print(f"문제 README 생성/업데이트: {problem_readme}")
 
         for member in members:
-            username = str(
-                member["username"]
-            )
+            username = str(member["username"])
+            languages = member["languages"]
 
-            languages = member[
-                "languages"
-            ]
-
-            if not isinstance(
-                languages,
-                list,
-            ):
+            if not isinstance(languages, list):
                 continue
 
             for language_value in languages:
-                language = str(
-                    language_value
-                )
-
-                extension = (
-                    LANG_EXTENSIONS.get(
-                        language
-                    )
-                )
+                language = str(language_value)
+                extension = LANG_EXTENSIONS.get(language)
 
                 if not extension:
                     print(
-                        "지원하지 않는 언어 스킵: "
-                        f"{username} - "
-                        f"{language}"
+                        f"지원하지 않는 언어 스킵: {username} - {language}"
                     )
                     continue
 
-                code_file = (
-                    problem_directory
-                    / f"{username}.{extension}"
-                )
-
+                code_file = problem_directory / f"{username}.{extension}"
                 created = ensure_file(
                     code_file,
-                    build_code_template(
-                        username,
-                        language,
-                    ),
+                    build_code_template(username, language),
                 )
 
                 if created:
-                    print(
-                        "코드 템플릿 생성: "
-                        f"{code_file}"
-                    )
+                    print(f"코드 템플릿 생성: {code_file}")
                 else:
-                    print(
-                        "기존 코드 파일 보존: "
-                        f"{code_file}"
-                    )
+                    print(f"기존 코드 파일 보존: {code_file}")
 
 
-def write_success_summary(
-    history_count: int,
-) -> None:
-    summary_path = os.getenv(
-        "GITHUB_STEP_SUMMARY"
-    )
-
+def write_success_summary(history_count: int) -> None:
+    summary_path = os.getenv("GITHUB_STEP_SUMMARY")
     if not summary_path:
         return
 
-    with open(
-        summary_path,
-        "a",
-        encoding="utf-8",
-    ) as summary:
+    with open(summary_path, "a", encoding="utf-8") as summary:
         summary.write(
             "# ✅ 데일리 문제 생성 완료\n\n"
             "중복 문제가 발견되지 않았습니다.\n\n"
             f"누적 문제 수: **{history_count}**\n\n"
-            "`problem_solve/PROBLEM_HISTORY.md`가 "
-            "갱신되었습니다.\n"
+            "`problem_solve/YYYY-MM/MM-DD/` 구조로 생성했습니다.\n"
         )
 
 
 def count_history_entries() -> int:
     history = collect_problem_history()
-
-    return sum(
-        len(records)
-        for records in history.values()
-    )
+    return sum(len(records) for records in history.values())
 
 
 def main() -> None:
     if not ROOT_README.exists():
-        print(
-            "루트 README.md가 없습니다."
-        )
+        print("루트 README.md가 없습니다.")
         sys.exit(1)
 
     try:
-        readme_text = (
-            ROOT_README.read_text(
-                encoding="utf-8"
-            )
-        )
+        readme_text = ROOT_README.read_text(encoding="utf-8")
+        daily_blocks = extract_daily_blocks(readme_text)
 
-        daily_blocks = (
-            extract_daily_blocks(
-                readme_text
-            )
-        )
-        
-        validate_daily_titles(
-            daily_blocks
-        )
-        
-        # 과거 날짜 덮어쓰기 방지
-        validate_daily_dates(
-            daily_blocks
-        )
+        validate_daily_titles(daily_blocks)
+        validate_daily_dates(daily_blocks)
 
-        # ---------------------------------------
-        # 기존 날짜 README 기준으로 과거 문제 수집
-        # ---------------------------------------
         history = collect_problem_history()
+        print(f"기존 문제 URL 수: {len(history)}")
 
-        print(
-            "기존 문제 URL 수: "
-            f"{len(history)}"
-        )
-
-        # ---------------------------------------
-        # 폴더를 만들기 전에 중복부터 검사
-        # ---------------------------------------
-        duplicates = (
-            find_duplicate_problems(
-                daily_blocks,
-                history,
-            )
-        )
-
+        duplicates = find_duplicate_problems(daily_blocks, history)
         if duplicates:
-            report_duplicates(
-                duplicates
-            )
-
-            # 실패시키면 이후 GitHub Actions의
-            # commit 단계가 실행되지 않는다.
+            report_duplicates(duplicates)
             sys.exit(1)
 
-        # ---------------------------------------
-        # 중복이 없을 때만 폴더 생성
-        # ---------------------------------------
-        member_section = (
-            extract_member_section(
-                readme_text
-            )
-        )
+        member_section = extract_member_section(readme_text)
+        all_members = extract_members(member_section)
+        duty_order = load_duty_order()
+        members = select_duty_members(all_members, duty_order)
 
-        members = extract_members(
-            member_section
-        )
-
-        print(
-            "daily_blocks_count: "
-            f"{len(daily_blocks)}"
-        )
+        print(f"daily_blocks_count: {len(daily_blocks)}")
+        print(f"duty_members_count: {len(members)}")
 
         for member in members:
             print(
-                f"member: "
-                f"{member['username']} "
+                f"member: {member['username']} "
                 f"{member['languages']}"
             )
 
-        for (
-            daily_title,
-            daily_body,
-        ) in daily_blocks:
-            links = extract_links(
-                daily_body
-            )
+        for daily_title, daily_body in daily_blocks:
+            links = extract_links(daily_body)
 
             print()
-            print(
-                f"daily_title: "
-                f"{daily_title}"
-            )
-            print(
-                f"links_count: "
-                f"{len(links)}"
-            )
+            print(f"daily_title: {daily_title}")
+            print(f"links_count: {len(links)}")
 
             generate_daily_folder(
                 daily_title,
@@ -1311,56 +963,24 @@ def main() -> None:
                 members,
             )
 
-        # ---------------------------------------
-        # 모든 날짜 README를 기준으로
-        # 전체 문제 이력 파일 생성
-        # ---------------------------------------
-        history_content = (
-            build_history_markdown()
-        )
-
-        if write_if_changed(
-            HISTORY_FILE,
-            history_content,
-        ):
-            print(
-                "문제 이력 생성/업데이트: "
-                f"{HISTORY_FILE}"
-            )
+        history_content = build_history_markdown()
+        if write_if_changed(HISTORY_FILE, history_content):
+            print(f"문제 이력 생성/업데이트: {HISTORY_FILE}")
         else:
-            print(
-                "문제 이력 변경 없음: "
-                f"{HISTORY_FILE}"
-            )
+            print(f"문제 이력 변경 없음: {HISTORY_FILE}")
 
-        history_count = (
-            count_history_entries()
-        )
-
-        write_success_summary(
-            history_count
-        )
+        write_success_summary(count_history_entries())
 
         print()
-        print(
-            "✅ 중복 검사 및 "
-            "데일리 문제 생성 완료"
-        )
+        print("✅ 중복 검사 및 데일리 문제 생성 완료")
 
     except ValueError as error:
         message = str(error)
-
         print(
             "::error title=문제 생성 실패::"
-            + escape_github_annotation(
-                message
-            )
+            + escape_github_annotation(message)
         )
-
-        print(
-            f"생성 실패: {message}"
-        )
-
+        print(f"생성 실패: {message}")
         sys.exit(1)
 
 
