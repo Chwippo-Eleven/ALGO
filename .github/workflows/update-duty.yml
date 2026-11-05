@@ -1,6 +1,15 @@
 name: Update Problem Duty
 
 on:
+  push:
+    branches:
+      - main
+    paths:
+      - README.md
+      - problem-duty.json
+      - .github/scripts/update_duty.py
+      - .github/workflows/update-duty.yml
+
   schedule:
     - cron: "0 18 * * 1-5"
       timezone: "Asia/Seoul"
