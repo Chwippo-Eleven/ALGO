@@ -1,6 +1,17 @@
 name: Update Algorithm Grass
 
 on:
+  push:
+    branches:
+      - main
+    paths:
+      - README.md
+      - problem-duty.json
+      - .github/scripts/update_grass.py
+      - .github/scripts/update_duty.py
+      - .github/scripts/generate_daily.py
+      - .github/workflows/update-grass.yml
+
   workflow_run:
     workflows:
       - "Batch merge all PRs"
@@ -21,8 +32,9 @@ jobs:
     if: >
       github.repository == 'Chwippo-Eleven/ALGO' &&
       (
+        (github.event_name == 'push' && github.actor != 'github-actions[bot]') ||
         github.event_name == 'workflow_dispatch' ||
-        github.event.workflow_run.conclusion == 'success'
+        (github.event_name == 'workflow_run' && github.event.workflow_run.conclusion == 'success')
       )
 
     runs-on: ubuntu-latest
@@ -46,13 +58,13 @@ jobs:
         run: |
           python .github/scripts/update_grass.py
 
-      - name: Commit grass SVG
+      - name: Commit grass SVG and README
         shell: bash
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
 
-          git add -- assets/algorithm-grass.svg
+          git add -- assets/algorithm-grass.svg README.md
 
           if git diff --cached --quiet; then
             echo "잔디 변경 사항이 없습니다."

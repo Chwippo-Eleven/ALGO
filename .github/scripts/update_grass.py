@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from datetime import date, datetime, timedelta
+from datetime import date, datetime
 from pathlib import Path
 from urllib.parse import quote
 from zoneinfo import ZoneInfo
@@ -10,7 +10,8 @@ import os
 import re
 import subprocess
 
-from generate_daily import build_code_template
+from generate_daily import build_code_template, daily_date_from_path, resolve_daily_date
+from update_duty import build_active_order, get_active_members, load_config
 
 
 README = Path("README.md")
@@ -69,14 +70,6 @@ DATE_RE = re.compile(
     r"^\d{2}-\d{2}$"
 )
 
-MEMBER_RE = re.compile(
-    r'<a\s+href=["\']https://github\.com/'
-    r'(?P<username>[^/"\'?#]+)["\'][^>]*>'
-    r'\s*<b>(?P<name>.*?)</b>\s*</a>',
-    re.I | re.S,
-)
-
-
 # =========================================================
 # 확장자 → generate_daily.py 언어명
 # =========================================================
@@ -133,105 +126,29 @@ def today_kst() -> date:
 def members_from_readme(
     text: str,
 ) -> list[dict[str, str]]:
-    """
-    README의 스터디 멤버 표에서
-
-    GitHub 사용자명
-    실제 이름
-
-    을 추출한다.
-    """
-
-    result = []
-    seen = set()
-
-    for match in MEMBER_RE.finditer(text):
-
-        username = html.unescape(
-            match.group("username")
-        ).strip()
-
-        name = re.sub(
-            r"<[^>]+>",
-            "",
-            match.group("name"),
-        )
-
-        name = (
-            html.unescape(name).strip()
-            or username
-        )
-
-        key = username.lower()
-
-        if key in seen:
-            continue
-
-        seen.add(key)
-
-        result.append(
-            {
-                "username": username,
-                "name": name,
-            }
-        )
-
-    if not result:
-        raise ValueError(
-            "README에서 스터디 멤버를 찾지 못했습니다."
-        )
-
-    return result
+    """JSON 순서대로 README에 남아 있는 등록 멤버만 가져온다."""
+    active_members = get_active_members(text)
+    active_order = build_active_order(load_config()["order"], active_members)
+    return [
+        {"username": username, "name": active_members[username]}
+        for username in active_order
+    ]
 
 
 # =========================================================
 # 날짜 처리
 # =========================================================
 
-def actual_date(
-    folder: str,
-) -> date:
-    """
-    MM-DD 폴더명을 실제 날짜 객체로 변환한다.
-
-    예:
-        08-17
-        → 2026-08-17
-    """
-
-    month, day = map(
-        int,
-        folder.split("-"),
-    )
-
-    today = today_kst()
-
-    candidate = date(
-        today.year,
-        month,
-        day,
-    )
-
-    # 연말 → 연초를 넘어가는 스터디 대응
-    #
-    # 예를 들어 현재가 1월인데 12-20 폴더가 있다면
-    # 전년도 날짜로 판단한다.
-    if (
-        candidate
-        > today + timedelta(days=45)
-    ):
-        candidate = date(
-            today.year - 1,
-            month,
-            day,
-        )
-
-    return candidate
+def actual_date(folder: Path) -> date:
+    """월별 폴더의 연도를 사용하고, 기존 날짜 폴더만 연도를 추정한다."""
+    if folder.parent == PROBLEM_ROOT:
+        return resolve_daily_date(folder.name, today_kst())
+    return daily_date_from_path(folder / "README.md")
 
 
 def study_days() -> list[Path]:
     """
-    problem_solve/MM-DD 형태 중 실제 스터디 회차만 가져온다.
+    problem_solve/MM-DD와 problem_solve/YYYY-MM/MM-DD의 실제 회차를 가져온다.
 
     조건:
     1. MM-DD 형식
@@ -247,7 +164,9 @@ def study_days() -> list[Path]:
     if not PROBLEM_ROOT.exists():
         return []
 
-    for path in PROBLEM_ROOT.iterdir():
+    paths = list(PROBLEM_ROOT.iterdir())
+    paths.extend(PROBLEM_ROOT.glob("????-??/*"))
+    for path in paths:
 
         if not path.is_dir():
             continue
@@ -258,9 +177,7 @@ def study_days() -> list[Path]:
             continue
 
         try:
-            current_date = actual_date(
-                path.name
-            )
+            current_date = actual_date(path)
 
         except ValueError:
             continue
@@ -686,9 +603,7 @@ def calculate(
             # 이번 달 참여 횟수
             # =================================================
 
-            day_date = actual_date(
-                day.name
-            )
+            day_date = actual_date(day)
 
             if (
                 done
@@ -1082,7 +997,7 @@ def make_svg(
                 f"https://github.com/"
                 f"{repository}/tree/main/"
                 f"problem_solve/"
-                f"{quote(day.name, safe='')}"
+                f"{quote(day.relative_to(PROBLEM_ROOT).as_posix(), safe='/')}"
             )
 
             status = (
