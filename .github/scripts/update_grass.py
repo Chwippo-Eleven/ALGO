@@ -647,7 +647,7 @@ def make_svg(
     stats: dict,
 ) -> str:
     """
-    README용 알고리즘 잔디 SVG.
+    최근 20회차를 표시하고 누적 통계는 전체 기간 기준으로 유지한다.
 
     한 행:
 
@@ -662,6 +662,9 @@ def make_svg(
     # =====================================================
     # 기본 셀 크기
     # =====================================================
+
+    display_limit = 20
+    days = days[-display_limit:]
 
     cell = 14
     gap = 4
@@ -738,7 +741,7 @@ def make_svg(
 
         (
             '<desc id="desc">'
-            '스터디원의 날짜별 알고리즘 문제 풀이 현황'
+            '최근 20회차의 풀이 현황과 전체 기간 누적 통계'
             '</desc>'
         ),
 
@@ -975,7 +978,7 @@ def make_svg(
         # =================================================
 
         for column, done in enumerate(
-            member_stats["solved"]
+            member_stats["solved"][-display_limit:]
         ):
 
             day = days[
