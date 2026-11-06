@@ -1,6 +1,15 @@
 name: Update Problem Duty
 
 on:
+  push:
+    branches:
+      - main
+    paths:
+      - README.md
+      - problem-duty.json
+      - .github/scripts/update_duty.py
+      - .github/workflows/update-duty.yml
+
   schedule:
     - cron: "0 18 * * 1-5"
       timezone: "Asia/Seoul"
@@ -16,7 +25,9 @@ concurrency:
 
 jobs:
   update-duty:
-    if: github.repository == 'Chwippo-Eleven/ALGO'
+    if: >
+      github.repository == 'Chwippo-Eleven/ALGO' &&
+      (github.event_name != 'push' || github.actor != 'github-actions[bot]')
 
     runs-on: ubuntu-latest
     timeout-minutes: 5

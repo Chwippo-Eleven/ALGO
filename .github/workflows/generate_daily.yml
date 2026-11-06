@@ -6,6 +6,8 @@ on:
       - main
     paths:
       - README.md
+      - problem-duty.json
+      - .github/scripts/generate_daily.py
 
   workflow_dispatch:
 
