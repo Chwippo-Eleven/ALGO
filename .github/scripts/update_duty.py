@@ -224,6 +224,9 @@ def load_config() -> dict:
     ) as file:
         config = json.load(file)
 
+    if not isinstance(config, dict):
+        raise ValueError("problem-duty.json은 객체여야 합니다.")
+
     required = {
         "order",
         "base_date",
@@ -257,6 +260,31 @@ def load_config() -> dict:
             "problem-duty.json의 "
             "order가 비어 있습니다."
         )
+
+    seen = set()
+    for username in config["order"]:
+        if not isinstance(username, str) or not re.fullmatch(
+            r"[A-Za-z0-9](?:[A-Za-z0-9-]{0,37}[A-Za-z0-9])?", username
+        ):
+            raise ValueError("order에는 올바른 GitHub 사용자명만 넣어야 합니다.")
+        key = username.lower()
+        if key in seen:
+            raise ValueError(f"order에 중복된 사용자명이 있습니다: {username}")
+        seen.add(key)
+
+    base_username = config["base_username"]
+    if not isinstance(base_username, str) or base_username.lower() not in seen:
+        raise ValueError("base_username은 order에 등록된 사용자명이어야 합니다.")
+
+    base_date = config["base_date"]
+    if not isinstance(base_date, str) or not re.fullmatch(r"\d{4}-\d{2}-\d{2}", base_date):
+        raise ValueError("base_date는 YYYY-MM-DD 형식이어야 합니다.")
+    try:
+        parsed_date = date.fromisoformat(base_date)
+    except ValueError as error:
+        raise ValueError("base_date가 올바른 날짜가 아닙니다.") from error
+    if parsed_date.weekday() >= 5:
+        raise ValueError("base_date는 평일이어야 합니다.")
 
     return config
 
@@ -413,9 +441,7 @@ def resolve_duty(
         config["base_date"]
     )
 
-    username = str(
-        config["base_username"]
-    )
+    username = config["base_username"]
 
     full_order = list(
         config["order"]

@@ -98,10 +98,8 @@
 
 <br />
 
-### 🟨 11-04 데일리 문제
-[여행 경로](https://school.programmers.co.kr/learn/courses/30/lessons/43164)
-### 🟨 11-05 데일리 문제
-[4가지 연산을 이용하여 1 만들기](https://www.codetree.ai/ko/trails/complete/curated-cards/challenge-make-one-using-four-operations/description)
+### 🟨 11-06 데일리 문제
+[185. Department Top Three Salaries](https://leetcode.com/problems/department-top-three-salaries/?envType=study-plan-v2&envId=top-sql-50)
 
 <br />
 
@@ -159,6 +157,7 @@ problem_solve/{날짜 또는 회차}/{[문제출처] 문제이름}/{GitHub 사�
 | 프로그래머스 | PGS |
 | 삼성SW Expert Academy | SWEA |
 | 리트코드   | LTC |
+| 코드트리   | CTR |
 
 ## 이모지 및 태그
 
