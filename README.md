@@ -99,7 +99,7 @@
 <br />
 
 ### 🟨 11-06 데일리 문제
-[185. Department Top Three Salaries](https://leetcode.com/problems/department-top-three-salaries/?envType=study-plan-v2&envId=top-sql-50)
+[외판원 순회](https://www.codetree.ai/ko/trails/complete/curated-cards/intro-traveling-salesman-problem-2/description)
 
 <br />
 
