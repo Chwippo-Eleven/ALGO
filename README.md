@@ -98,7 +98,7 @@
 
 <br />
 
-### 🟨 11-07 데일리 문제
+### 🟨 11-09 데일리 문제
 [외판원 순회](https://www.codetree.ai/ko/trails/complete/curated-cards/intro-traveling-salesman-problem-2/description)
 
 <br />
