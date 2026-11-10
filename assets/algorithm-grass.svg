@@ -10,130 +10,130 @@ text{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,san
 .stat{font-size:11px;font-weight:500;fill:#57606a}
 @media(prefers-color-scheme:dark){text{fill:#c9d1d9}.date,.score,.stat{fill:#8b949e}}
 </style>
-<text x="277.0" y="103" class="date" text-anchor="start" transform="rotate(-45 277.0 103)">10-07</text>
-<text x="295.0" y="103" class="date" text-anchor="start" transform="rotate(-45 295.0 103)">10-08</text>
-<text x="313.0" y="103" class="date" text-anchor="start" transform="rotate(-45 313.0 103)">10-12</text>
-<text x="331.0" y="103" class="date" text-anchor="start" transform="rotate(-45 331.0 103)">10-13</text>
-<text x="349.0" y="103" class="date" text-anchor="start" transform="rotate(-45 349.0 103)">10-14</text>
-<text x="367.0" y="103" class="date" text-anchor="start" transform="rotate(-45 367.0 103)">10-15</text>
-<text x="385.0" y="103" class="date" text-anchor="start" transform="rotate(-45 385.0 103)">10-16</text>
-<text x="403.0" y="103" class="date" text-anchor="start" transform="rotate(-45 403.0 103)">10-20</text>
-<text x="421.0" y="103" class="date" text-anchor="start" transform="rotate(-45 421.0 103)">10-21</text>
-<text x="439.0" y="103" class="date" text-anchor="start" transform="rotate(-45 439.0 103)">10-22</text>
-<text x="457.0" y="103" class="date" text-anchor="start" transform="rotate(-45 457.0 103)">10-23</text>
-<text x="475.0" y="103" class="date" text-anchor="start" transform="rotate(-45 475.0 103)">10-26</text>
-<text x="493.0" y="103" class="date" text-anchor="start" transform="rotate(-45 493.0 103)">10-27</text>
-<text x="511.0" y="103" class="date" text-anchor="start" transform="rotate(-45 511.0 103)">10-28</text>
-<text x="529.0" y="103" class="date" text-anchor="start" transform="rotate(-45 529.0 103)">10-29</text>
-<text x="547.0" y="103" class="date" text-anchor="start" transform="rotate(-45 547.0 103)">11-02</text>
-<text x="565.0" y="103" class="date" text-anchor="start" transform="rotate(-45 565.0 103)">11-03</text>
-<text x="583.0" y="103" class="date" text-anchor="start" transform="rotate(-45 583.0 103)">11-04</text>
-<text x="601.0" y="103" class="date" text-anchor="start" transform="rotate(-45 601.0 103)">11-05</text>
-<text x="619.0" y="103" class="date" text-anchor="start" transform="rotate(-45 619.0 103)">11-06</text>
+<text x="277.0" y="103" class="date" text-anchor="start" transform="rotate(-45 277.0 103)">10-12</text>
+<text x="295.0" y="103" class="date" text-anchor="start" transform="rotate(-45 295.0 103)">10-13</text>
+<text x="313.0" y="103" class="date" text-anchor="start" transform="rotate(-45 313.0 103)">10-14</text>
+<text x="331.0" y="103" class="date" text-anchor="start" transform="rotate(-45 331.0 103)">10-15</text>
+<text x="349.0" y="103" class="date" text-anchor="start" transform="rotate(-45 349.0 103)">10-16</text>
+<text x="367.0" y="103" class="date" text-anchor="start" transform="rotate(-45 367.0 103)">10-20</text>
+<text x="385.0" y="103" class="date" text-anchor="start" transform="rotate(-45 385.0 103)">10-21</text>
+<text x="403.0" y="103" class="date" text-anchor="start" transform="rotate(-45 403.0 103)">10-22</text>
+<text x="421.0" y="103" class="date" text-anchor="start" transform="rotate(-45 421.0 103)">10-23</text>
+<text x="439.0" y="103" class="date" text-anchor="start" transform="rotate(-45 439.0 103)">10-26</text>
+<text x="457.0" y="103" class="date" text-anchor="start" transform="rotate(-45 457.0 103)">10-27</text>
+<text x="475.0" y="103" class="date" text-anchor="start" transform="rotate(-45 475.0 103)">10-28</text>
+<text x="493.0" y="103" class="date" text-anchor="start" transform="rotate(-45 493.0 103)">10-29</text>
+<text x="511.0" y="103" class="date" text-anchor="start" transform="rotate(-45 511.0 103)">11-02</text>
+<text x="529.0" y="103" class="date" text-anchor="start" transform="rotate(-45 529.0 103)">11-03</text>
+<text x="547.0" y="103" class="date" text-anchor="start" transform="rotate(-45 547.0 103)">11-04</text>
+<text x="565.0" y="103" class="date" text-anchor="start" transform="rotate(-45 565.0 103)">11-05</text>
+<text x="583.0" y="103" class="date" text-anchor="start" transform="rotate(-45 583.0 103)">11-06</text>
+<text x="601.0" y="103" class="date" text-anchor="start" transform="rotate(-45 601.0 103)">11-09</text>
+<text x="619.0" y="103" class="date" text-anchor="start" transform="rotate(-45 619.0 103)">11-10</text>
 <a xlink:href="https://github.com/qkrcjsdlr10" target="_blank">
 <text x="0" y="136" class="name">박천익</text>
 </a>
 <text x="72" y="136" class="score">2050점</text>
 <rect x="125" y="124" width="88" height="17" rx="8.5" fill="#1f6feb"/>
 <text x="169.0" y="135.5" class="badge" text-anchor="middle">DIAMOND</text>
-<a xlink:href="https://github.com/Chwippo-Eleven/ALGO/tree/main/problem_solve/2026-10/10-07" target="_blank">
-<rect x="270" y="125" width="14" height="14" rx="3" fill="#216e39">
-<title>박천익 · 10-07 · 풀이 완료</title>
-</rect>
-</a>
-<a xlink:href="https://github.com/Chwippo-Eleven/ALGO/tree/main/problem_solve/2026-10/10-08" target="_blank">
-<rect x="288" y="125" width="14" height="14" rx="3" fill="#216e39">
-<title>박천익 · 10-08 · 풀이 완료</title>
-</rect>
-</a>
 <a xlink:href="https://github.com/Chwippo-Eleven/ALGO/tree/main/problem_solve/2026-10/10-12" target="_blank">
-<rect x="306" y="125" width="14" height="14" rx="3" fill="#216e39">
+<rect x="270" y="125" width="14" height="14" rx="3" fill="#216e39">
 <title>박천익 · 10-12 · 풀이 완료</title>
 </rect>
 </a>
 <a xlink:href="https://github.com/Chwippo-Eleven/ALGO/tree/main/problem_solve/2026-10/10-13" target="_blank">
-<rect x="324" y="125" width="14" height="14" rx="3" fill="#216e39">
+<rect x="288" y="125" width="14" height="14" rx="3" fill="#216e39">
 <title>박천익 · 10-13 · 풀이 완료</title>
 </rect>
 </a>
 <a xlink:href="https://github.com/Chwippo-Eleven/ALGO/tree/main/problem_solve/2026-10/10-14" target="_blank">
-<rect x="342" y="125" width="14" height="14" rx="3" fill="#216e39">
+<rect x="306" y="125" width="14" height="14" rx="3" fill="#216e39">
 <title>박천익 · 10-14 · 풀이 완료</title>
 </rect>
 </a>
 <a xlink:href="https://github.com/Chwippo-Eleven/ALGO/tree/main/problem_solve/2026-10/10-15" target="_blank">
-<rect x="360" y="125" width="14" height="14" rx="3" fill="#216e39">
+<rect x="324" y="125" width="14" height="14" rx="3" fill="#216e39">
 <title>박천익 · 10-15 · 풀이 완료</title>
 </rect>
 </a>
 <a xlink:href="https://github.com/Chwippo-Eleven/ALGO/tree/main/problem_solve/2026-10/10-16" target="_blank">
-<rect x="378" y="125" width="14" height="14" rx="3" fill="#216e39">
+<rect x="342" y="125" width="14" height="14" rx="3" fill="#216e39">
 <title>박천익 · 10-16 · 풀이 완료</title>
 </rect>
 </a>
 <a xlink:href="https://github.com/Chwippo-Eleven/ALGO/tree/main/problem_solve/2026-10/10-20" target="_blank">
-<rect x="396" y="125" width="14" height="14" rx="3" fill="#216e39">
+<rect x="360" y="125" width="14" height="14" rx="3" fill="#216e39">
 <title>박천익 · 10-20 · 풀이 완료</title>
 </rect>
 </a>
 <a xlink:href="https://github.com/Chwippo-Eleven/ALGO/tree/main/problem_solve/2026-10/10-21" target="_blank">
-<rect x="414" y="125" width="14" height="14" rx="3" fill="#216e39">
+<rect x="378" y="125" width="14" height="14" rx="3" fill="#216e39">
 <title>박천익 · 10-21 · 풀이 완료</title>
 </rect>
 </a>
 <a xlink:href="https://github.com/Chwippo-Eleven/ALGO/tree/main/problem_solve/2026-10/10-22" target="_blank">
-<rect x="432" y="125" width="14" height="14" rx="3" fill="#216e39">
+<rect x="396" y="125" width="14" height="14" rx="3" fill="#216e39">
 <title>박천익 · 10-22 · 풀이 완료</title>
 </rect>
 </a>
 <a xlink:href="https://github.com/Chwippo-Eleven/ALGO/tree/main/problem_solve/2026-10/10-23" target="_blank">
-<rect x="450" y="125" width="14" height="14" rx="3" fill="#216e39">
+<rect x="414" y="125" width="14" height="14" rx="3" fill="#216e39">
 <title>박천익 · 10-23 · 풀이 완료</title>
 </rect>
 </a>
 <a xlink:href="https://github.com/Chwippo-Eleven/ALGO/tree/main/problem_solve/2026-10/10-26" target="_blank">
-<rect x="468" y="125" width="14" height="14" rx="3" fill="#216e39">
+<rect x="432" y="125" width="14" height="14" rx="3" fill="#216e39">
 <title>박천익 · 10-26 · 풀이 완료</title>
 </rect>
 </a>
 <a xlink:href="https://github.com/Chwippo-Eleven/ALGO/tree/main/problem_solve/2026-10/10-27" target="_blank">
-<rect x="486" y="125" width="14" height="14" rx="3" fill="#216e39">
+<rect x="450" y="125" width="14" height="14" rx="3" fill="#216e39">
 <title>박천익 · 10-27 · 풀이 완료</title>
 </rect>
 </a>
 <a xlink:href="https://github.com/Chwippo-Eleven/ALGO/tree/main/problem_solve/2026-10/10-28" target="_blank">
-<rect x="504" y="125" width="14" height="14" rx="3" fill="#216e39">
+<rect x="468" y="125" width="14" height="14" rx="3" fill="#216e39">
 <title>박천익 · 10-28 · 풀이 완료</title>
 </rect>
 </a>
 <a xlink:href="https://github.com/Chwippo-Eleven/ALGO/tree/main/problem_solve/2026-10/10-29" target="_blank">
-<rect x="522" y="125" width="14" height="14" rx="3" fill="#216e39">
+<rect x="486" y="125" width="14" height="14" rx="3" fill="#216e39">
 <title>박천익 · 10-29 · 풀이 완료</title>
 </rect>
 </a>
 <a xlink:href="https://github.com/Chwippo-Eleven/ALGO/tree/main/problem_solve/2026-11/11-02" target="_blank">
-<rect x="540" y="125" width="14" height="14" rx="3" fill="#216e39">
+<rect x="504" y="125" width="14" height="14" rx="3" fill="#216e39">
 <title>박천익 · 11-02 · 풀이 완료</title>
 </rect>
 </a>
 <a xlink:href="https://github.com/Chwippo-Eleven/ALGO/tree/main/problem_solve/2026-11/11-03" target="_blank">
-<rect x="558" y="125" width="14" height="14" rx="3" fill="#216e39">
+<rect x="522" y="125" width="14" height="14" rx="3" fill="#216e39">
 <title>박천익 · 11-03 · 풀이 완료</title>
 </rect>
 </a>
 <a xlink:href="https://github.com/Chwippo-Eleven/ALGO/tree/main/problem_solve/2026-11/11-04" target="_blank">
-<rect x="576" y="125" width="14" height="14" rx="3" fill="#216e39">
+<rect x="540" y="125" width="14" height="14" rx="3" fill="#216e39">
 <title>박천익 · 11-04 · 풀이 완료</title>
 </rect>
 </a>
 <a xlink:href="https://github.com/Chwippo-Eleven/ALGO/tree/main/problem_solve/2026-11/11-05" target="_blank">
-<rect x="594" y="125" width="14" height="14" rx="3" fill="#216e39">
+<rect x="558" y="125" width="14" height="14" rx="3" fill="#216e39">
 <title>박천익 · 11-05 · 풀이 완료</title>
 </rect>
 </a>
 <a xlink:href="https://github.com/Chwippo-Eleven/ALGO/tree/main/problem_solve/2026-11/11-06" target="_blank">
-<rect x="612" y="125" width="14" height="14" rx="3" fill="#ebedf0">
+<rect x="576" y="125" width="14" height="14" rx="3" fill="#ebedf0">
 <title>박천익 · 11-06 · 미제출</title>
+</rect>
+</a>
+<a xlink:href="https://github.com/Chwippo-Eleven/ALGO/tree/main/problem_solve/2026-11/11-09" target="_blank">
+<rect x="594" y="125" width="14" height="14" rx="3" fill="#ebedf0">
+<title>박천익 · 11-09 · 미제출</title>
+</rect>
+</a>
+<a xlink:href="https://github.com/Chwippo-Eleven/ALGO/tree/main/problem_solve/2026-11/11-10" target="_blank">
+<rect x="612" y="125" width="14" height="14" rx="3" fill="#ebedf0">
+<title>박천익 · 11-10 · 미제출</title>
 </rect>
 </a>
 <text x="648" y="136" class="stat">이번달 참여 4회 · 최장 스트릭 72일</text>
@@ -143,104 +143,104 @@ text{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,san
 <text x="72" y="164" class="score">1776점</text>
 <rect x="125" y="152" width="88" height="17" rx="8.5" fill="#1f6feb"/>
 <text x="169.0" y="163.5" class="badge" text-anchor="middle">DIAMOND</text>
-<a xlink:href="https://github.com/Chwippo-Eleven/ALGO/tree/main/problem_solve/2026-10/10-07" target="_blank">
-<rect x="270" y="153" width="14" height="14" rx="3" fill="#216e39">
-<title>김준우 · 10-07 · 풀이 완료</title>
-</rect>
-</a>
-<a xlink:href="https://github.com/Chwippo-Eleven/ALGO/tree/main/problem_solve/2026-10/10-08" target="_blank">
-<rect x="288" y="153" width="14" height="14" rx="3" fill="#216e39">
-<title>김준우 · 10-08 · 풀이 완료</title>
-</rect>
-</a>
 <a xlink:href="https://github.com/Chwippo-Eleven/ALGO/tree/main/problem_solve/2026-10/10-12" target="_blank">
-<rect x="306" y="153" width="14" height="14" rx="3" fill="#216e39">
+<rect x="270" y="153" width="14" height="14" rx="3" fill="#216e39">
 <title>김준우 · 10-12 · 풀이 완료</title>
 </rect>
 </a>
 <a xlink:href="https://github.com/Chwippo-Eleven/ALGO/tree/main/problem_solve/2026-10/10-13" target="_blank">
-<rect x="324" y="153" width="14" height="14" rx="3" fill="#216e39">
+<rect x="288" y="153" width="14" height="14" rx="3" fill="#216e39">
 <title>김준우 · 10-13 · 풀이 완료</title>
 </rect>
 </a>
 <a xlink:href="https://github.com/Chwippo-Eleven/ALGO/tree/main/problem_solve/2026-10/10-14" target="_blank">
-<rect x="342" y="153" width="14" height="14" rx="3" fill="#216e39">
+<rect x="306" y="153" width="14" height="14" rx="3" fill="#216e39">
 <title>김준우 · 10-14 · 풀이 완료</title>
 </rect>
 </a>
 <a xlink:href="https://github.com/Chwippo-Eleven/ALGO/tree/main/problem_solve/2026-10/10-15" target="_blank">
-<rect x="360" y="153" width="14" height="14" rx="3" fill="#216e39">
+<rect x="324" y="153" width="14" height="14" rx="3" fill="#216e39">
 <title>김준우 · 10-15 · 풀이 완료</title>
 </rect>
 </a>
 <a xlink:href="https://github.com/Chwippo-Eleven/ALGO/tree/main/problem_solve/2026-10/10-16" target="_blank">
-<rect x="378" y="153" width="14" height="14" rx="3" fill="#ebedf0">
+<rect x="342" y="153" width="14" height="14" rx="3" fill="#ebedf0">
 <title>김준우 · 10-16 · 미제출</title>
 </rect>
 </a>
 <a xlink:href="https://github.com/Chwippo-Eleven/ALGO/tree/main/problem_solve/2026-10/10-20" target="_blank">
-<rect x="396" y="153" width="14" height="14" rx="3" fill="#216e39">
+<rect x="360" y="153" width="14" height="14" rx="3" fill="#216e39">
 <title>김준우 · 10-20 · 풀이 완료</title>
 </rect>
 </a>
 <a xlink:href="https://github.com/Chwippo-Eleven/ALGO/tree/main/problem_solve/2026-10/10-21" target="_blank">
-<rect x="414" y="153" width="14" height="14" rx="3" fill="#216e39">
+<rect x="378" y="153" width="14" height="14" rx="3" fill="#216e39">
 <title>김준우 · 10-21 · 풀이 완료</title>
 </rect>
 </a>
 <a xlink:href="https://github.com/Chwippo-Eleven/ALGO/tree/main/problem_solve/2026-10/10-22" target="_blank">
-<rect x="432" y="153" width="14" height="14" rx="3" fill="#216e39">
+<rect x="396" y="153" width="14" height="14" rx="3" fill="#216e39">
 <title>김준우 · 10-22 · 풀이 완료</title>
 </rect>
 </a>
 <a xlink:href="https://github.com/Chwippo-Eleven/ALGO/tree/main/problem_solve/2026-10/10-23" target="_blank">
-<rect x="450" y="153" width="14" height="14" rx="3" fill="#ebedf0">
+<rect x="414" y="153" width="14" height="14" rx="3" fill="#ebedf0">
 <title>김준우 · 10-23 · 미제출</title>
 </rect>
 </a>
 <a xlink:href="https://github.com/Chwippo-Eleven/ALGO/tree/main/problem_solve/2026-10/10-26" target="_blank">
-<rect x="468" y="153" width="14" height="14" rx="3" fill="#216e39">
+<rect x="432" y="153" width="14" height="14" rx="3" fill="#216e39">
 <title>김준우 · 10-26 · 풀이 완료</title>
 </rect>
 </a>
 <a xlink:href="https://github.com/Chwippo-Eleven/ALGO/tree/main/problem_solve/2026-10/10-27" target="_blank">
-<rect x="486" y="153" width="14" height="14" rx="3" fill="#ebedf0">
+<rect x="450" y="153" width="14" height="14" rx="3" fill="#ebedf0">
 <title>김준우 · 10-27 · 미제출</title>
 </rect>
 </a>
 <a xlink:href="https://github.com/Chwippo-Eleven/ALGO/tree/main/problem_solve/2026-10/10-28" target="_blank">
-<rect x="504" y="153" width="14" height="14" rx="3" fill="#ebedf0">
+<rect x="468" y="153" width="14" height="14" rx="3" fill="#ebedf0">
 <title>김준우 · 10-28 · 미제출</title>
 </rect>
 </a>
 <a xlink:href="https://github.com/Chwippo-Eleven/ALGO/tree/main/problem_solve/2026-10/10-29" target="_blank">
-<rect x="522" y="153" width="14" height="14" rx="3" fill="#ebedf0">
+<rect x="486" y="153" width="14" height="14" rx="3" fill="#ebedf0">
 <title>김준우 · 10-29 · 미제출</title>
 </rect>
 </a>
 <a xlink:href="https://github.com/Chwippo-Eleven/ALGO/tree/main/problem_solve/2026-11/11-02" target="_blank">
-<rect x="540" y="153" width="14" height="14" rx="3" fill="#216e39">
+<rect x="504" y="153" width="14" height="14" rx="3" fill="#216e39">
 <title>김준우 · 11-02 · 풀이 완료</title>
 </rect>
 </a>
 <a xlink:href="https://github.com/Chwippo-Eleven/ALGO/tree/main/problem_solve/2026-11/11-03" target="_blank">
-<rect x="558" y="153" width="14" height="14" rx="3" fill="#216e39">
+<rect x="522" y="153" width="14" height="14" rx="3" fill="#216e39">
 <title>김준우 · 11-03 · 풀이 완료</title>
 </rect>
 </a>
 <a xlink:href="https://github.com/Chwippo-Eleven/ALGO/tree/main/problem_solve/2026-11/11-04" target="_blank">
-<rect x="576" y="153" width="14" height="14" rx="3" fill="#216e39">
+<rect x="540" y="153" width="14" height="14" rx="3" fill="#216e39">
 <title>김준우 · 11-04 · 풀이 완료</title>
 </rect>
 </a>
 <a xlink:href="https://github.com/Chwippo-Eleven/ALGO/tree/main/problem_solve/2026-11/11-05" target="_blank">
-<rect x="594" y="153" width="14" height="14" rx="3" fill="#216e39">
+<rect x="558" y="153" width="14" height="14" rx="3" fill="#216e39">
 <title>김준우 · 11-05 · 풀이 완료</title>
 </rect>
 </a>
 <a xlink:href="https://github.com/Chwippo-Eleven/ALGO/tree/main/problem_solve/2026-11/11-06" target="_blank">
-<rect x="612" y="153" width="14" height="14" rx="3" fill="#216e39">
+<rect x="576" y="153" width="14" height="14" rx="3" fill="#216e39">
 <title>김준우 · 11-06 · 풀이 완료</title>
+</rect>
+</a>
+<a xlink:href="https://github.com/Chwippo-Eleven/ALGO/tree/main/problem_solve/2026-11/11-09" target="_blank">
+<rect x="594" y="153" width="14" height="14" rx="3" fill="#ebedf0">
+<title>김준우 · 11-09 · 미제출</title>
+</rect>
+</a>
+<a xlink:href="https://github.com/Chwippo-Eleven/ALGO/tree/main/problem_solve/2026-11/11-10" target="_blank">
+<rect x="612" y="153" width="14" height="14" rx="3" fill="#ebedf0">
+<title>김준우 · 11-10 · 미제출</title>
 </rect>
 </a>
 <text x="648" y="164" class="stat">이번달 참여 5회 · 최장 스트릭 59일</text>
@@ -250,104 +250,104 @@ text{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,san
 <text x="72" y="192" class="score">688점</text>
 <rect x="125" y="180" width="88" height="17" rx="8.5" fill="#8250df"/>
 <text x="169.0" y="191.5" class="badge" text-anchor="middle">PLATINUM</text>
-<a xlink:href="https://github.com/Chwippo-Eleven/ALGO/tree/main/problem_solve/2026-10/10-07" target="_blank">
-<rect x="270" y="181" width="14" height="14" rx="3" fill="#216e39">
-<title>이영은 · 10-07 · 풀이 완료</title>
-</rect>
-</a>
-<a xlink:href="https://github.com/Chwippo-Eleven/ALGO/tree/main/problem_solve/2026-10/10-08" target="_blank">
-<rect x="288" y="181" width="14" height="14" rx="3" fill="#ebedf0">
-<title>이영은 · 10-08 · 미제출</title>
-</rect>
-</a>
 <a xlink:href="https://github.com/Chwippo-Eleven/ALGO/tree/main/problem_solve/2026-10/10-12" target="_blank">
-<rect x="306" y="181" width="14" height="14" rx="3" fill="#ebedf0">
+<rect x="270" y="181" width="14" height="14" rx="3" fill="#ebedf0">
 <title>이영은 · 10-12 · 미제출</title>
 </rect>
 </a>
 <a xlink:href="https://github.com/Chwippo-Eleven/ALGO/tree/main/problem_solve/2026-10/10-13" target="_blank">
-<rect x="324" y="181" width="14" height="14" rx="3" fill="#ebedf0">
+<rect x="288" y="181" width="14" height="14" rx="3" fill="#ebedf0">
 <title>이영은 · 10-13 · 미제출</title>
 </rect>
 </a>
 <a xlink:href="https://github.com/Chwippo-Eleven/ALGO/tree/main/problem_solve/2026-10/10-14" target="_blank">
-<rect x="342" y="181" width="14" height="14" rx="3" fill="#ebedf0">
+<rect x="306" y="181" width="14" height="14" rx="3" fill="#ebedf0">
 <title>이영은 · 10-14 · 미제출</title>
 </rect>
 </a>
 <a xlink:href="https://github.com/Chwippo-Eleven/ALGO/tree/main/problem_solve/2026-10/10-15" target="_blank">
-<rect x="360" y="181" width="14" height="14" rx="3" fill="#ebedf0">
+<rect x="324" y="181" width="14" height="14" rx="3" fill="#ebedf0">
 <title>이영은 · 10-15 · 미제출</title>
 </rect>
 </a>
 <a xlink:href="https://github.com/Chwippo-Eleven/ALGO/tree/main/problem_solve/2026-10/10-16" target="_blank">
-<rect x="378" y="181" width="14" height="14" rx="3" fill="#ebedf0">
+<rect x="342" y="181" width="14" height="14" rx="3" fill="#ebedf0">
 <title>이영은 · 10-16 · 미제출</title>
 </rect>
 </a>
 <a xlink:href="https://github.com/Chwippo-Eleven/ALGO/tree/main/problem_solve/2026-10/10-20" target="_blank">
-<rect x="396" y="181" width="14" height="14" rx="3" fill="#216e39">
+<rect x="360" y="181" width="14" height="14" rx="3" fill="#216e39">
 <title>이영은 · 10-20 · 풀이 완료</title>
 </rect>
 </a>
 <a xlink:href="https://github.com/Chwippo-Eleven/ALGO/tree/main/problem_solve/2026-10/10-21" target="_blank">
-<rect x="414" y="181" width="14" height="14" rx="3" fill="#ebedf0">
+<rect x="378" y="181" width="14" height="14" rx="3" fill="#ebedf0">
 <title>이영은 · 10-21 · 미제출</title>
 </rect>
 </a>
 <a xlink:href="https://github.com/Chwippo-Eleven/ALGO/tree/main/problem_solve/2026-10/10-22" target="_blank">
-<rect x="432" y="181" width="14" height="14" rx="3" fill="#ebedf0">
+<rect x="396" y="181" width="14" height="14" rx="3" fill="#ebedf0">
 <title>이영은 · 10-22 · 미제출</title>
 </rect>
 </a>
 <a xlink:href="https://github.com/Chwippo-Eleven/ALGO/tree/main/problem_solve/2026-10/10-23" target="_blank">
-<rect x="450" y="181" width="14" height="14" rx="3" fill="#ebedf0">
+<rect x="414" y="181" width="14" height="14" rx="3" fill="#ebedf0">
 <title>이영은 · 10-23 · 미제출</title>
 </rect>
 </a>
 <a xlink:href="https://github.com/Chwippo-Eleven/ALGO/tree/main/problem_solve/2026-10/10-26" target="_blank">
-<rect x="468" y="181" width="14" height="14" rx="3" fill="#ebedf0">
+<rect x="432" y="181" width="14" height="14" rx="3" fill="#ebedf0">
 <title>이영은 · 10-26 · 미제출</title>
 </rect>
 </a>
 <a xlink:href="https://github.com/Chwippo-Eleven/ALGO/tree/main/problem_solve/2026-10/10-27" target="_blank">
-<rect x="486" y="181" width="14" height="14" rx="3" fill="#ebedf0">
+<rect x="450" y="181" width="14" height="14" rx="3" fill="#ebedf0">
 <title>이영은 · 10-27 · 미제출</title>
 </rect>
 </a>
 <a xlink:href="https://github.com/Chwippo-Eleven/ALGO/tree/main/problem_solve/2026-10/10-28" target="_blank">
-<rect x="504" y="181" width="14" height="14" rx="3" fill="#ebedf0">
+<rect x="468" y="181" width="14" height="14" rx="3" fill="#ebedf0">
 <title>이영은 · 10-28 · 미제출</title>
 </rect>
 </a>
 <a xlink:href="https://github.com/Chwippo-Eleven/ALGO/tree/main/problem_solve/2026-10/10-29" target="_blank">
-<rect x="522" y="181" width="14" height="14" rx="3" fill="#ebedf0">
+<rect x="486" y="181" width="14" height="14" rx="3" fill="#ebedf0">
 <title>이영은 · 10-29 · 미제출</title>
 </rect>
 </a>
 <a xlink:href="https://github.com/Chwippo-Eleven/ALGO/tree/main/problem_solve/2026-11/11-02" target="_blank">
-<rect x="540" y="181" width="14" height="14" rx="3" fill="#ebedf0">
+<rect x="504" y="181" width="14" height="14" rx="3" fill="#ebedf0">
 <title>이영은 · 11-02 · 미제출</title>
 </rect>
 </a>
 <a xlink:href="https://github.com/Chwippo-Eleven/ALGO/tree/main/problem_solve/2026-11/11-03" target="_blank">
-<rect x="558" y="181" width="14" height="14" rx="3" fill="#216e39">
+<rect x="522" y="181" width="14" height="14" rx="3" fill="#216e39">
 <title>이영은 · 11-03 · 풀이 완료</title>
 </rect>
 </a>
 <a xlink:href="https://github.com/Chwippo-Eleven/ALGO/tree/main/problem_solve/2026-11/11-04" target="_blank">
-<rect x="576" y="181" width="14" height="14" rx="3" fill="#ebedf0">
+<rect x="540" y="181" width="14" height="14" rx="3" fill="#ebedf0">
 <title>이영은 · 11-04 · 미제출</title>
 </rect>
 </a>
 <a xlink:href="https://github.com/Chwippo-Eleven/ALGO/tree/main/problem_solve/2026-11/11-05" target="_blank">
-<rect x="594" y="181" width="14" height="14" rx="3" fill="#ebedf0">
+<rect x="558" y="181" width="14" height="14" rx="3" fill="#ebedf0">
 <title>이영은 · 11-05 · 미제출</title>
 </rect>
 </a>
 <a xlink:href="https://github.com/Chwippo-Eleven/ALGO/tree/main/problem_solve/2026-11/11-06" target="_blank">
-<rect x="612" y="181" width="14" height="14" rx="3" fill="#ebedf0">
+<rect x="576" y="181" width="14" height="14" rx="3" fill="#ebedf0">
 <title>이영은 · 11-06 · 미제출</title>
+</rect>
+</a>
+<a xlink:href="https://github.com/Chwippo-Eleven/ALGO/tree/main/problem_solve/2026-11/11-09" target="_blank">
+<rect x="594" y="181" width="14" height="14" rx="3" fill="#ebedf0">
+<title>이영은 · 11-09 · 미제출</title>
+</rect>
+</a>
+<a xlink:href="https://github.com/Chwippo-Eleven/ALGO/tree/main/problem_solve/2026-11/11-10" target="_blank">
+<rect x="612" y="181" width="14" height="14" rx="3" fill="#ebedf0">
+<title>이영은 · 11-10 · 미제출</title>
 </rect>
 </a>
 <text x="648" y="192" class="stat">이번달 참여 1회 · 최장 스트릭 19일</text>
@@ -357,104 +357,104 @@ text{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,san
 <text x="72" y="220" class="score">1970점</text>
 <rect x="125" y="208" width="88" height="17" rx="8.5" fill="#1f6feb"/>
 <text x="169.0" y="219.5" class="badge" text-anchor="middle">DIAMOND</text>
-<a xlink:href="https://github.com/Chwippo-Eleven/ALGO/tree/main/problem_solve/2026-10/10-07" target="_blank">
-<rect x="270" y="209" width="14" height="14" rx="3" fill="#216e39">
-<title>김기훈 · 10-07 · 풀이 완료</title>
-</rect>
-</a>
-<a xlink:href="https://github.com/Chwippo-Eleven/ALGO/tree/main/problem_solve/2026-10/10-08" target="_blank">
-<rect x="288" y="209" width="14" height="14" rx="3" fill="#216e39">
-<title>김기훈 · 10-08 · 풀이 완료</title>
-</rect>
-</a>
 <a xlink:href="https://github.com/Chwippo-Eleven/ALGO/tree/main/problem_solve/2026-10/10-12" target="_blank">
-<rect x="306" y="209" width="14" height="14" rx="3" fill="#216e39">
+<rect x="270" y="209" width="14" height="14" rx="3" fill="#216e39">
 <title>김기훈 · 10-12 · 풀이 완료</title>
 </rect>
 </a>
 <a xlink:href="https://github.com/Chwippo-Eleven/ALGO/tree/main/problem_solve/2026-10/10-13" target="_blank">
-<rect x="324" y="209" width="14" height="14" rx="3" fill="#216e39">
+<rect x="288" y="209" width="14" height="14" rx="3" fill="#216e39">
 <title>김기훈 · 10-13 · 풀이 완료</title>
 </rect>
 </a>
 <a xlink:href="https://github.com/Chwippo-Eleven/ALGO/tree/main/problem_solve/2026-10/10-14" target="_blank">
-<rect x="342" y="209" width="14" height="14" rx="3" fill="#216e39">
+<rect x="306" y="209" width="14" height="14" rx="3" fill="#216e39">
 <title>김기훈 · 10-14 · 풀이 완료</title>
 </rect>
 </a>
 <a xlink:href="https://github.com/Chwippo-Eleven/ALGO/tree/main/problem_solve/2026-10/10-15" target="_blank">
-<rect x="360" y="209" width="14" height="14" rx="3" fill="#216e39">
+<rect x="324" y="209" width="14" height="14" rx="3" fill="#216e39">
 <title>김기훈 · 10-15 · 풀이 완료</title>
 </rect>
 </a>
 <a xlink:href="https://github.com/Chwippo-Eleven/ALGO/tree/main/problem_solve/2026-10/10-16" target="_blank">
-<rect x="378" y="209" width="14" height="14" rx="3" fill="#216e39">
+<rect x="342" y="209" width="14" height="14" rx="3" fill="#216e39">
 <title>김기훈 · 10-16 · 풀이 완료</title>
 </rect>
 </a>
 <a xlink:href="https://github.com/Chwippo-Eleven/ALGO/tree/main/problem_solve/2026-10/10-20" target="_blank">
-<rect x="396" y="209" width="14" height="14" rx="3" fill="#216e39">
+<rect x="360" y="209" width="14" height="14" rx="3" fill="#216e39">
 <title>김기훈 · 10-20 · 풀이 완료</title>
 </rect>
 </a>
 <a xlink:href="https://github.com/Chwippo-Eleven/ALGO/tree/main/problem_solve/2026-10/10-21" target="_blank">
-<rect x="414" y="209" width="14" height="14" rx="3" fill="#216e39">
+<rect x="378" y="209" width="14" height="14" rx="3" fill="#216e39">
 <title>김기훈 · 10-21 · 풀이 완료</title>
 </rect>
 </a>
 <a xlink:href="https://github.com/Chwippo-Eleven/ALGO/tree/main/problem_solve/2026-10/10-22" target="_blank">
-<rect x="432" y="209" width="14" height="14" rx="3" fill="#216e39">
+<rect x="396" y="209" width="14" height="14" rx="3" fill="#216e39">
 <title>김기훈 · 10-22 · 풀이 완료</title>
 </rect>
 </a>
 <a xlink:href="https://github.com/Chwippo-Eleven/ALGO/tree/main/problem_solve/2026-10/10-23" target="_blank">
-<rect x="450" y="209" width="14" height="14" rx="3" fill="#216e39">
+<rect x="414" y="209" width="14" height="14" rx="3" fill="#216e39">
 <title>김기훈 · 10-23 · 풀이 완료</title>
 </rect>
 </a>
 <a xlink:href="https://github.com/Chwippo-Eleven/ALGO/tree/main/problem_solve/2026-10/10-26" target="_blank">
-<rect x="468" y="209" width="14" height="14" rx="3" fill="#216e39">
+<rect x="432" y="209" width="14" height="14" rx="3" fill="#216e39">
 <title>김기훈 · 10-26 · 풀이 완료</title>
 </rect>
 </a>
 <a xlink:href="https://github.com/Chwippo-Eleven/ALGO/tree/main/problem_solve/2026-10/10-27" target="_blank">
-<rect x="486" y="209" width="14" height="14" rx="3" fill="#216e39">
+<rect x="450" y="209" width="14" height="14" rx="3" fill="#216e39">
 <title>김기훈 · 10-27 · 풀이 완료</title>
 </rect>
 </a>
 <a xlink:href="https://github.com/Chwippo-Eleven/ALGO/tree/main/problem_solve/2026-10/10-28" target="_blank">
-<rect x="504" y="209" width="14" height="14" rx="3" fill="#216e39">
+<rect x="468" y="209" width="14" height="14" rx="3" fill="#216e39">
 <title>김기훈 · 10-28 · 풀이 완료</title>
 </rect>
 </a>
 <a xlink:href="https://github.com/Chwippo-Eleven/ALGO/tree/main/problem_solve/2026-10/10-29" target="_blank">
-<rect x="522" y="209" width="14" height="14" rx="3" fill="#ebedf0">
+<rect x="486" y="209" width="14" height="14" rx="3" fill="#ebedf0">
 <title>김기훈 · 10-29 · 미제출</title>
 </rect>
 </a>
 <a xlink:href="https://github.com/Chwippo-Eleven/ALGO/tree/main/problem_solve/2026-11/11-02" target="_blank">
-<rect x="540" y="209" width="14" height="14" rx="3" fill="#216e39">
+<rect x="504" y="209" width="14" height="14" rx="3" fill="#216e39">
 <title>김기훈 · 11-02 · 풀이 완료</title>
 </rect>
 </a>
 <a xlink:href="https://github.com/Chwippo-Eleven/ALGO/tree/main/problem_solve/2026-11/11-03" target="_blank">
-<rect x="558" y="209" width="14" height="14" rx="3" fill="#216e39">
+<rect x="522" y="209" width="14" height="14" rx="3" fill="#216e39">
 <title>김기훈 · 11-03 · 풀이 완료</title>
 </rect>
 </a>
 <a xlink:href="https://github.com/Chwippo-Eleven/ALGO/tree/main/problem_solve/2026-11/11-04" target="_blank">
-<rect x="576" y="209" width="14" height="14" rx="3" fill="#216e39">
+<rect x="540" y="209" width="14" height="14" rx="3" fill="#216e39">
 <title>김기훈 · 11-04 · 풀이 완료</title>
 </rect>
 </a>
 <a xlink:href="https://github.com/Chwippo-Eleven/ALGO/tree/main/problem_solve/2026-11/11-05" target="_blank">
-<rect x="594" y="209" width="14" height="14" rx="3" fill="#216e39">
+<rect x="558" y="209" width="14" height="14" rx="3" fill="#216e39">
 <title>김기훈 · 11-05 · 풀이 완료</title>
 </rect>
 </a>
 <a xlink:href="https://github.com/Chwippo-Eleven/ALGO/tree/main/problem_solve/2026-11/11-06" target="_blank">
-<rect x="612" y="209" width="14" height="14" rx="3" fill="#216e39">
+<rect x="576" y="209" width="14" height="14" rx="3" fill="#216e39">
 <title>김기훈 · 11-06 · 풀이 완료</title>
+</rect>
+</a>
+<a xlink:href="https://github.com/Chwippo-Eleven/ALGO/tree/main/problem_solve/2026-11/11-09" target="_blank">
+<rect x="594" y="209" width="14" height="14" rx="3" fill="#ebedf0">
+<title>김기훈 · 11-09 · 미제출</title>
+</rect>
+</a>
+<a xlink:href="https://github.com/Chwippo-Eleven/ALGO/tree/main/problem_solve/2026-11/11-10" target="_blank">
+<rect x="612" y="209" width="14" height="14" rx="3" fill="#ebedf0">
+<title>김기훈 · 11-10 · 미제출</title>
 </rect>
 </a>
 <text x="648" y="220" class="stat">이번달 참여 5회 · 최장 스트릭 67일</text>
@@ -464,104 +464,104 @@ text{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,san
 <text x="72" y="248" class="score">776점</text>
 <rect x="125" y="236" width="88" height="17" rx="8.5" fill="#8250df"/>
 <text x="169.0" y="247.5" class="badge" text-anchor="middle">PLATINUM</text>
-<a xlink:href="https://github.com/Chwippo-Eleven/ALGO/tree/main/problem_solve/2026-10/10-07" target="_blank">
-<rect x="270" y="237" width="14" height="14" rx="3" fill="#ebedf0">
-<title>강재준 · 10-07 · 미제출</title>
-</rect>
-</a>
-<a xlink:href="https://github.com/Chwippo-Eleven/ALGO/tree/main/problem_solve/2026-10/10-08" target="_blank">
-<rect x="288" y="237" width="14" height="14" rx="3" fill="#ebedf0">
-<title>강재준 · 10-08 · 미제출</title>
-</rect>
-</a>
 <a xlink:href="https://github.com/Chwippo-Eleven/ALGO/tree/main/problem_solve/2026-10/10-12" target="_blank">
-<rect x="306" y="237" width="14" height="14" rx="3" fill="#ebedf0">
+<rect x="270" y="237" width="14" height="14" rx="3" fill="#ebedf0">
 <title>강재준 · 10-12 · 미제출</title>
 </rect>
 </a>
 <a xlink:href="https://github.com/Chwippo-Eleven/ALGO/tree/main/problem_solve/2026-10/10-13" target="_blank">
-<rect x="324" y="237" width="14" height="14" rx="3" fill="#ebedf0">
+<rect x="288" y="237" width="14" height="14" rx="3" fill="#ebedf0">
 <title>강재준 · 10-13 · 미제출</title>
 </rect>
 </a>
 <a xlink:href="https://github.com/Chwippo-Eleven/ALGO/tree/main/problem_solve/2026-10/10-14" target="_blank">
-<rect x="342" y="237" width="14" height="14" rx="3" fill="#ebedf0">
+<rect x="306" y="237" width="14" height="14" rx="3" fill="#ebedf0">
 <title>강재준 · 10-14 · 미제출</title>
 </rect>
 </a>
 <a xlink:href="https://github.com/Chwippo-Eleven/ALGO/tree/main/problem_solve/2026-10/10-15" target="_blank">
-<rect x="360" y="237" width="14" height="14" rx="3" fill="#ebedf0">
+<rect x="324" y="237" width="14" height="14" rx="3" fill="#ebedf0">
 <title>강재준 · 10-15 · 미제출</title>
 </rect>
 </a>
 <a xlink:href="https://github.com/Chwippo-Eleven/ALGO/tree/main/problem_solve/2026-10/10-16" target="_blank">
-<rect x="378" y="237" width="14" height="14" rx="3" fill="#ebedf0">
+<rect x="342" y="237" width="14" height="14" rx="3" fill="#ebedf0">
 <title>강재준 · 10-16 · 미제출</title>
 </rect>
 </a>
 <a xlink:href="https://github.com/Chwippo-Eleven/ALGO/tree/main/problem_solve/2026-10/10-20" target="_blank">
-<rect x="396" y="237" width="14" height="14" rx="3" fill="#ebedf0">
+<rect x="360" y="237" width="14" height="14" rx="3" fill="#ebedf0">
 <title>강재준 · 10-20 · 미제출</title>
 </rect>
 </a>
 <a xlink:href="https://github.com/Chwippo-Eleven/ALGO/tree/main/problem_solve/2026-10/10-21" target="_blank">
-<rect x="414" y="237" width="14" height="14" rx="3" fill="#ebedf0">
+<rect x="378" y="237" width="14" height="14" rx="3" fill="#ebedf0">
 <title>강재준 · 10-21 · 미제출</title>
 </rect>
 </a>
 <a xlink:href="https://github.com/Chwippo-Eleven/ALGO/tree/main/problem_solve/2026-10/10-22" target="_blank">
-<rect x="432" y="237" width="14" height="14" rx="3" fill="#ebedf0">
+<rect x="396" y="237" width="14" height="14" rx="3" fill="#ebedf0">
 <title>강재준 · 10-22 · 미제출</title>
 </rect>
 </a>
 <a xlink:href="https://github.com/Chwippo-Eleven/ALGO/tree/main/problem_solve/2026-10/10-23" target="_blank">
-<rect x="450" y="237" width="14" height="14" rx="3" fill="#ebedf0">
+<rect x="414" y="237" width="14" height="14" rx="3" fill="#ebedf0">
 <title>강재준 · 10-23 · 미제출</title>
 </rect>
 </a>
 <a xlink:href="https://github.com/Chwippo-Eleven/ALGO/tree/main/problem_solve/2026-10/10-26" target="_blank">
-<rect x="468" y="237" width="14" height="14" rx="3" fill="#ebedf0">
+<rect x="432" y="237" width="14" height="14" rx="3" fill="#ebedf0">
 <title>강재준 · 10-26 · 미제출</title>
 </rect>
 </a>
 <a xlink:href="https://github.com/Chwippo-Eleven/ALGO/tree/main/problem_solve/2026-10/10-27" target="_blank">
-<rect x="486" y="237" width="14" height="14" rx="3" fill="#ebedf0">
+<rect x="450" y="237" width="14" height="14" rx="3" fill="#ebedf0">
 <title>강재준 · 10-27 · 미제출</title>
 </rect>
 </a>
 <a xlink:href="https://github.com/Chwippo-Eleven/ALGO/tree/main/problem_solve/2026-10/10-28" target="_blank">
-<rect x="504" y="237" width="14" height="14" rx="3" fill="#ebedf0">
+<rect x="468" y="237" width="14" height="14" rx="3" fill="#ebedf0">
 <title>강재준 · 10-28 · 미제출</title>
 </rect>
 </a>
 <a xlink:href="https://github.com/Chwippo-Eleven/ALGO/tree/main/problem_solve/2026-10/10-29" target="_blank">
-<rect x="522" y="237" width="14" height="14" rx="3" fill="#ebedf0">
+<rect x="486" y="237" width="14" height="14" rx="3" fill="#ebedf0">
 <title>강재준 · 10-29 · 미제출</title>
 </rect>
 </a>
 <a xlink:href="https://github.com/Chwippo-Eleven/ALGO/tree/main/problem_solve/2026-11/11-02" target="_blank">
-<rect x="540" y="237" width="14" height="14" rx="3" fill="#ebedf0">
+<rect x="504" y="237" width="14" height="14" rx="3" fill="#ebedf0">
 <title>강재준 · 11-02 · 미제출</title>
 </rect>
 </a>
 <a xlink:href="https://github.com/Chwippo-Eleven/ALGO/tree/main/problem_solve/2026-11/11-03" target="_blank">
-<rect x="558" y="237" width="14" height="14" rx="3" fill="#ebedf0">
+<rect x="522" y="237" width="14" height="14" rx="3" fill="#ebedf0">
 <title>강재준 · 11-03 · 미제출</title>
 </rect>
 </a>
 <a xlink:href="https://github.com/Chwippo-Eleven/ALGO/tree/main/problem_solve/2026-11/11-04" target="_blank">
-<rect x="576" y="237" width="14" height="14" rx="3" fill="#ebedf0">
+<rect x="540" y="237" width="14" height="14" rx="3" fill="#ebedf0">
 <title>강재준 · 11-04 · 미제출</title>
 </rect>
 </a>
 <a xlink:href="https://github.com/Chwippo-Eleven/ALGO/tree/main/problem_solve/2026-11/11-05" target="_blank">
-<rect x="594" y="237" width="14" height="14" rx="3" fill="#ebedf0">
+<rect x="558" y="237" width="14" height="14" rx="3" fill="#ebedf0">
 <title>강재준 · 11-05 · 미제출</title>
 </rect>
 </a>
 <a xlink:href="https://github.com/Chwippo-Eleven/ALGO/tree/main/problem_solve/2026-11/11-06" target="_blank">
-<rect x="612" y="237" width="14" height="14" rx="3" fill="#ebedf0">
+<rect x="576" y="237" width="14" height="14" rx="3" fill="#ebedf0">
 <title>강재준 · 11-06 · 미제출</title>
+</rect>
+</a>
+<a xlink:href="https://github.com/Chwippo-Eleven/ALGO/tree/main/problem_solve/2026-11/11-09" target="_blank">
+<rect x="594" y="237" width="14" height="14" rx="3" fill="#ebedf0">
+<title>강재준 · 11-09 · 미제출</title>
+</rect>
+</a>
+<a xlink:href="https://github.com/Chwippo-Eleven/ALGO/tree/main/problem_solve/2026-11/11-10" target="_blank">
+<rect x="612" y="237" width="14" height="14" rx="3" fill="#ebedf0">
+<title>강재준 · 11-10 · 미제출</title>
 </rect>
 </a>
 <text x="648" y="248" class="stat">이번달 참여 0회 · 최장 스트릭 20일</text>
@@ -571,104 +571,104 @@ text{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,san
 <text x="72" y="276" class="score">1168점</text>
 <rect x="125" y="264" width="88" height="17" rx="8.5" fill="#1f6feb"/>
 <text x="169.0" y="275.5" class="badge" text-anchor="middle">DIAMOND</text>
-<a xlink:href="https://github.com/Chwippo-Eleven/ALGO/tree/main/problem_solve/2026-10/10-07" target="_blank">
-<rect x="270" y="265" width="14" height="14" rx="3" fill="#ebedf0">
-<title>김세연 · 10-07 · 미제출</title>
-</rect>
-</a>
-<a xlink:href="https://github.com/Chwippo-Eleven/ALGO/tree/main/problem_solve/2026-10/10-08" target="_blank">
-<rect x="288" y="265" width="14" height="14" rx="3" fill="#216e39">
-<title>김세연 · 10-08 · 풀이 완료</title>
-</rect>
-</a>
 <a xlink:href="https://github.com/Chwippo-Eleven/ALGO/tree/main/problem_solve/2026-10/10-12" target="_blank">
-<rect x="306" y="265" width="14" height="14" rx="3" fill="#216e39">
+<rect x="270" y="265" width="14" height="14" rx="3" fill="#216e39">
 <title>김세연 · 10-12 · 풀이 완료</title>
 </rect>
 </a>
 <a xlink:href="https://github.com/Chwippo-Eleven/ALGO/tree/main/problem_solve/2026-10/10-13" target="_blank">
-<rect x="324" y="265" width="14" height="14" rx="3" fill="#216e39">
+<rect x="288" y="265" width="14" height="14" rx="3" fill="#216e39">
 <title>김세연 · 10-13 · 풀이 완료</title>
 </rect>
 </a>
 <a xlink:href="https://github.com/Chwippo-Eleven/ALGO/tree/main/problem_solve/2026-10/10-14" target="_blank">
-<rect x="342" y="265" width="14" height="14" rx="3" fill="#ebedf0">
+<rect x="306" y="265" width="14" height="14" rx="3" fill="#ebedf0">
 <title>김세연 · 10-14 · 미제출</title>
 </rect>
 </a>
 <a xlink:href="https://github.com/Chwippo-Eleven/ALGO/tree/main/problem_solve/2026-10/10-15" target="_blank">
-<rect x="360" y="265" width="14" height="14" rx="3" fill="#ebedf0">
+<rect x="324" y="265" width="14" height="14" rx="3" fill="#ebedf0">
 <title>김세연 · 10-15 · 미제출</title>
 </rect>
 </a>
 <a xlink:href="https://github.com/Chwippo-Eleven/ALGO/tree/main/problem_solve/2026-10/10-16" target="_blank">
-<rect x="378" y="265" width="14" height="14" rx="3" fill="#ebedf0">
+<rect x="342" y="265" width="14" height="14" rx="3" fill="#ebedf0">
 <title>김세연 · 10-16 · 미제출</title>
 </rect>
 </a>
 <a xlink:href="https://github.com/Chwippo-Eleven/ALGO/tree/main/problem_solve/2026-10/10-20" target="_blank">
-<rect x="396" y="265" width="14" height="14" rx="3" fill="#ebedf0">
+<rect x="360" y="265" width="14" height="14" rx="3" fill="#ebedf0">
 <title>김세연 · 10-20 · 미제출</title>
 </rect>
 </a>
 <a xlink:href="https://github.com/Chwippo-Eleven/ALGO/tree/main/problem_solve/2026-10/10-21" target="_blank">
-<rect x="414" y="265" width="14" height="14" rx="3" fill="#ebedf0">
+<rect x="378" y="265" width="14" height="14" rx="3" fill="#ebedf0">
 <title>김세연 · 10-21 · 미제출</title>
 </rect>
 </a>
 <a xlink:href="https://github.com/Chwippo-Eleven/ALGO/tree/main/problem_solve/2026-10/10-22" target="_blank">
-<rect x="432" y="265" width="14" height="14" rx="3" fill="#ebedf0">
+<rect x="396" y="265" width="14" height="14" rx="3" fill="#ebedf0">
 <title>김세연 · 10-22 · 미제출</title>
 </rect>
 </a>
 <a xlink:href="https://github.com/Chwippo-Eleven/ALGO/tree/main/problem_solve/2026-10/10-23" target="_blank">
-<rect x="450" y="265" width="14" height="14" rx="3" fill="#ebedf0">
+<rect x="414" y="265" width="14" height="14" rx="3" fill="#ebedf0">
 <title>김세연 · 10-23 · 미제출</title>
 </rect>
 </a>
 <a xlink:href="https://github.com/Chwippo-Eleven/ALGO/tree/main/problem_solve/2026-10/10-26" target="_blank">
-<rect x="468" y="265" width="14" height="14" rx="3" fill="#ebedf0">
+<rect x="432" y="265" width="14" height="14" rx="3" fill="#ebedf0">
 <title>김세연 · 10-26 · 미제출</title>
 </rect>
 </a>
 <a xlink:href="https://github.com/Chwippo-Eleven/ALGO/tree/main/problem_solve/2026-10/10-27" target="_blank">
-<rect x="486" y="265" width="14" height="14" rx="3" fill="#ebedf0">
+<rect x="450" y="265" width="14" height="14" rx="3" fill="#ebedf0">
 <title>김세연 · 10-27 · 미제출</title>
 </rect>
 </a>
 <a xlink:href="https://github.com/Chwippo-Eleven/ALGO/tree/main/problem_solve/2026-10/10-28" target="_blank">
-<rect x="504" y="265" width="14" height="14" rx="3" fill="#ebedf0">
+<rect x="468" y="265" width="14" height="14" rx="3" fill="#ebedf0">
 <title>김세연 · 10-28 · 미제출</title>
 </rect>
 </a>
 <a xlink:href="https://github.com/Chwippo-Eleven/ALGO/tree/main/problem_solve/2026-10/10-29" target="_blank">
-<rect x="522" y="265" width="14" height="14" rx="3" fill="#216e39">
+<rect x="486" y="265" width="14" height="14" rx="3" fill="#216e39">
 <title>김세연 · 10-29 · 풀이 완료</title>
 </rect>
 </a>
 <a xlink:href="https://github.com/Chwippo-Eleven/ALGO/tree/main/problem_solve/2026-11/11-02" target="_blank">
-<rect x="540" y="265" width="14" height="14" rx="3" fill="#216e39">
+<rect x="504" y="265" width="14" height="14" rx="3" fill="#216e39">
 <title>김세연 · 11-02 · 풀이 완료</title>
 </rect>
 </a>
 <a xlink:href="https://github.com/Chwippo-Eleven/ALGO/tree/main/problem_solve/2026-11/11-03" target="_blank">
-<rect x="558" y="265" width="14" height="14" rx="3" fill="#216e39">
+<rect x="522" y="265" width="14" height="14" rx="3" fill="#216e39">
 <title>김세연 · 11-03 · 풀이 완료</title>
 </rect>
 </a>
 <a xlink:href="https://github.com/Chwippo-Eleven/ALGO/tree/main/problem_solve/2026-11/11-04" target="_blank">
-<rect x="576" y="265" width="14" height="14" rx="3" fill="#216e39">
+<rect x="540" y="265" width="14" height="14" rx="3" fill="#216e39">
 <title>김세연 · 11-04 · 풀이 완료</title>
 </rect>
 </a>
 <a xlink:href="https://github.com/Chwippo-Eleven/ALGO/tree/main/problem_solve/2026-11/11-05" target="_blank">
-<rect x="594" y="265" width="14" height="14" rx="3" fill="#216e39">
+<rect x="558" y="265" width="14" height="14" rx="3" fill="#216e39">
 <title>김세연 · 11-05 · 풀이 완료</title>
 </rect>
 </a>
 <a xlink:href="https://github.com/Chwippo-Eleven/ALGO/tree/main/problem_solve/2026-11/11-06" target="_blank">
-<rect x="612" y="265" width="14" height="14" rx="3" fill="#216e39">
+<rect x="576" y="265" width="14" height="14" rx="3" fill="#216e39">
 <title>김세연 · 11-06 · 풀이 완료</title>
+</rect>
+</a>
+<a xlink:href="https://github.com/Chwippo-Eleven/ALGO/tree/main/problem_solve/2026-11/11-09" target="_blank">
+<rect x="594" y="265" width="14" height="14" rx="3" fill="#ebedf0">
+<title>김세연 · 11-09 · 미제출</title>
+</rect>
+</a>
+<a xlink:href="https://github.com/Chwippo-Eleven/ALGO/tree/main/problem_solve/2026-11/11-10" target="_blank">
+<rect x="612" y="265" width="14" height="14" rx="3" fill="#ebedf0">
+<title>김세연 · 11-10 · 미제출</title>
 </rect>
 </a>
 <text x="648" y="276" class="stat">이번달 참여 5회 · 최장 스트릭 37일</text>
@@ -678,104 +678,104 @@ text{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,san
 <text x="72" y="304" class="score">656점</text>
 <rect x="125" y="292" width="88" height="17" rx="8.5" fill="#8250df"/>
 <text x="169.0" y="303.5" class="badge" text-anchor="middle">PLATINUM</text>
-<a xlink:href="https://github.com/Chwippo-Eleven/ALGO/tree/main/problem_solve/2026-10/10-07" target="_blank">
-<rect x="270" y="293" width="14" height="14" rx="3" fill="#216e39">
-<title>마예은 · 10-07 · 풀이 완료</title>
-</rect>
-</a>
-<a xlink:href="https://github.com/Chwippo-Eleven/ALGO/tree/main/problem_solve/2026-10/10-08" target="_blank">
-<rect x="288" y="293" width="14" height="14" rx="3" fill="#ebedf0">
-<title>마예은 · 10-08 · 미제출</title>
-</rect>
-</a>
 <a xlink:href="https://github.com/Chwippo-Eleven/ALGO/tree/main/problem_solve/2026-10/10-12" target="_blank">
-<rect x="306" y="293" width="14" height="14" rx="3" fill="#ebedf0">
+<rect x="270" y="293" width="14" height="14" rx="3" fill="#ebedf0">
 <title>마예은 · 10-12 · 미제출</title>
 </rect>
 </a>
 <a xlink:href="https://github.com/Chwippo-Eleven/ALGO/tree/main/problem_solve/2026-10/10-13" target="_blank">
-<rect x="324" y="293" width="14" height="14" rx="3" fill="#ebedf0">
+<rect x="288" y="293" width="14" height="14" rx="3" fill="#ebedf0">
 <title>마예은 · 10-13 · 미제출</title>
 </rect>
 </a>
 <a xlink:href="https://github.com/Chwippo-Eleven/ALGO/tree/main/problem_solve/2026-10/10-14" target="_blank">
-<rect x="342" y="293" width="14" height="14" rx="3" fill="#ebedf0">
+<rect x="306" y="293" width="14" height="14" rx="3" fill="#ebedf0">
 <title>마예은 · 10-14 · 미제출</title>
 </rect>
 </a>
 <a xlink:href="https://github.com/Chwippo-Eleven/ALGO/tree/main/problem_solve/2026-10/10-15" target="_blank">
-<rect x="360" y="293" width="14" height="14" rx="3" fill="#ebedf0">
+<rect x="324" y="293" width="14" height="14" rx="3" fill="#ebedf0">
 <title>마예은 · 10-15 · 미제출</title>
 </rect>
 </a>
 <a xlink:href="https://github.com/Chwippo-Eleven/ALGO/tree/main/problem_solve/2026-10/10-16" target="_blank">
-<rect x="378" y="293" width="14" height="14" rx="3" fill="#ebedf0">
+<rect x="342" y="293" width="14" height="14" rx="3" fill="#ebedf0">
 <title>마예은 · 10-16 · 미제출</title>
 </rect>
 </a>
 <a xlink:href="https://github.com/Chwippo-Eleven/ALGO/tree/main/problem_solve/2026-10/10-20" target="_blank">
-<rect x="396" y="293" width="14" height="14" rx="3" fill="#ebedf0">
+<rect x="360" y="293" width="14" height="14" rx="3" fill="#ebedf0">
 <title>마예은 · 10-20 · 미제출</title>
 </rect>
 </a>
 <a xlink:href="https://github.com/Chwippo-Eleven/ALGO/tree/main/problem_solve/2026-10/10-21" target="_blank">
-<rect x="414" y="293" width="14" height="14" rx="3" fill="#ebedf0">
+<rect x="378" y="293" width="14" height="14" rx="3" fill="#ebedf0">
 <title>마예은 · 10-21 · 미제출</title>
 </rect>
 </a>
 <a xlink:href="https://github.com/Chwippo-Eleven/ALGO/tree/main/problem_solve/2026-10/10-22" target="_blank">
-<rect x="432" y="293" width="14" height="14" rx="3" fill="#ebedf0">
+<rect x="396" y="293" width="14" height="14" rx="3" fill="#ebedf0">
 <title>마예은 · 10-22 · 미제출</title>
 </rect>
 </a>
 <a xlink:href="https://github.com/Chwippo-Eleven/ALGO/tree/main/problem_solve/2026-10/10-23" target="_blank">
-<rect x="450" y="293" width="14" height="14" rx="3" fill="#ebedf0">
+<rect x="414" y="293" width="14" height="14" rx="3" fill="#ebedf0">
 <title>마예은 · 10-23 · 미제출</title>
 </rect>
 </a>
 <a xlink:href="https://github.com/Chwippo-Eleven/ALGO/tree/main/problem_solve/2026-10/10-26" target="_blank">
-<rect x="468" y="293" width="14" height="14" rx="3" fill="#ebedf0">
+<rect x="432" y="293" width="14" height="14" rx="3" fill="#ebedf0">
 <title>마예은 · 10-26 · 미제출</title>
 </rect>
 </a>
 <a xlink:href="https://github.com/Chwippo-Eleven/ALGO/tree/main/problem_solve/2026-10/10-27" target="_blank">
-<rect x="486" y="293" width="14" height="14" rx="3" fill="#ebedf0">
+<rect x="450" y="293" width="14" height="14" rx="3" fill="#ebedf0">
 <title>마예은 · 10-27 · 미제출</title>
 </rect>
 </a>
 <a xlink:href="https://github.com/Chwippo-Eleven/ALGO/tree/main/problem_solve/2026-10/10-28" target="_blank">
-<rect x="504" y="293" width="14" height="14" rx="3" fill="#ebedf0">
+<rect x="468" y="293" width="14" height="14" rx="3" fill="#ebedf0">
 <title>마예은 · 10-28 · 미제출</title>
 </rect>
 </a>
 <a xlink:href="https://github.com/Chwippo-Eleven/ALGO/tree/main/problem_solve/2026-10/10-29" target="_blank">
-<rect x="522" y="293" width="14" height="14" rx="3" fill="#ebedf0">
+<rect x="486" y="293" width="14" height="14" rx="3" fill="#ebedf0">
 <title>마예은 · 10-29 · 미제출</title>
 </rect>
 </a>
 <a xlink:href="https://github.com/Chwippo-Eleven/ALGO/tree/main/problem_solve/2026-11/11-02" target="_blank">
-<rect x="540" y="293" width="14" height="14" rx="3" fill="#ebedf0">
+<rect x="504" y="293" width="14" height="14" rx="3" fill="#ebedf0">
 <title>마예은 · 11-02 · 미제출</title>
 </rect>
 </a>
 <a xlink:href="https://github.com/Chwippo-Eleven/ALGO/tree/main/problem_solve/2026-11/11-03" target="_blank">
-<rect x="558" y="293" width="14" height="14" rx="3" fill="#ebedf0">
+<rect x="522" y="293" width="14" height="14" rx="3" fill="#ebedf0">
 <title>마예은 · 11-03 · 미제출</title>
 </rect>
 </a>
 <a xlink:href="https://github.com/Chwippo-Eleven/ALGO/tree/main/problem_solve/2026-11/11-04" target="_blank">
-<rect x="576" y="293" width="14" height="14" rx="3" fill="#ebedf0">
+<rect x="540" y="293" width="14" height="14" rx="3" fill="#ebedf0">
 <title>마예은 · 11-04 · 미제출</title>
 </rect>
 </a>
 <a xlink:href="https://github.com/Chwippo-Eleven/ALGO/tree/main/problem_solve/2026-11/11-05" target="_blank">
-<rect x="594" y="293" width="14" height="14" rx="3" fill="#ebedf0">
+<rect x="558" y="293" width="14" height="14" rx="3" fill="#ebedf0">
 <title>마예은 · 11-05 · 미제출</title>
 </rect>
 </a>
 <a xlink:href="https://github.com/Chwippo-Eleven/ALGO/tree/main/problem_solve/2026-11/11-06" target="_blank">
-<rect x="612" y="293" width="14" height="14" rx="3" fill="#216e39">
+<rect x="576" y="293" width="14" height="14" rx="3" fill="#216e39">
 <title>마예은 · 11-06 · 풀이 완료</title>
+</rect>
+</a>
+<a xlink:href="https://github.com/Chwippo-Eleven/ALGO/tree/main/problem_solve/2026-11/11-09" target="_blank">
+<rect x="594" y="293" width="14" height="14" rx="3" fill="#ebedf0">
+<title>마예은 · 11-09 · 미제출</title>
+</rect>
+</a>
+<a xlink:href="https://github.com/Chwippo-Eleven/ALGO/tree/main/problem_solve/2026-11/11-10" target="_blank">
+<rect x="612" y="293" width="14" height="14" rx="3" fill="#ebedf0">
+<title>마예은 · 11-10 · 미제출</title>
 </rect>
 </a>
 <text x="648" y="304" class="stat">이번달 참여 1회 · 최장 스트릭 19일</text>
@@ -785,104 +785,104 @@ text{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,san
 <text x="72" y="332" class="score">1022점</text>
 <rect x="125" y="320" width="88" height="17" rx="8.5" fill="#1f6feb"/>
 <text x="169.0" y="331.5" class="badge" text-anchor="middle">DIAMOND</text>
-<a xlink:href="https://github.com/Chwippo-Eleven/ALGO/tree/main/problem_solve/2026-10/10-07" target="_blank">
-<rect x="270" y="321" width="14" height="14" rx="3" fill="#216e39">
-<title>신상윤 · 10-07 · 풀이 완료</title>
-</rect>
-</a>
-<a xlink:href="https://github.com/Chwippo-Eleven/ALGO/tree/main/problem_solve/2026-10/10-08" target="_blank">
-<rect x="288" y="321" width="14" height="14" rx="3" fill="#216e39">
-<title>신상윤 · 10-08 · 풀이 완료</title>
-</rect>
-</a>
 <a xlink:href="https://github.com/Chwippo-Eleven/ALGO/tree/main/problem_solve/2026-10/10-12" target="_blank">
-<rect x="306" y="321" width="14" height="14" rx="3" fill="#216e39">
+<rect x="270" y="321" width="14" height="14" rx="3" fill="#216e39">
 <title>신상윤 · 10-12 · 풀이 완료</title>
 </rect>
 </a>
 <a xlink:href="https://github.com/Chwippo-Eleven/ALGO/tree/main/problem_solve/2026-10/10-13" target="_blank">
-<rect x="324" y="321" width="14" height="14" rx="3" fill="#ebedf0">
+<rect x="288" y="321" width="14" height="14" rx="3" fill="#ebedf0">
 <title>신상윤 · 10-13 · 미제출</title>
 </rect>
 </a>
 <a xlink:href="https://github.com/Chwippo-Eleven/ALGO/tree/main/problem_solve/2026-10/10-14" target="_blank">
-<rect x="342" y="321" width="14" height="14" rx="3" fill="#216e39">
+<rect x="306" y="321" width="14" height="14" rx="3" fill="#216e39">
 <title>신상윤 · 10-14 · 풀이 완료</title>
 </rect>
 </a>
 <a xlink:href="https://github.com/Chwippo-Eleven/ALGO/tree/main/problem_solve/2026-10/10-15" target="_blank">
-<rect x="360" y="321" width="14" height="14" rx="3" fill="#216e39">
+<rect x="324" y="321" width="14" height="14" rx="3" fill="#216e39">
 <title>신상윤 · 10-15 · 풀이 완료</title>
 </rect>
 </a>
 <a xlink:href="https://github.com/Chwippo-Eleven/ALGO/tree/main/problem_solve/2026-10/10-16" target="_blank">
-<rect x="378" y="321" width="14" height="14" rx="3" fill="#ebedf0">
+<rect x="342" y="321" width="14" height="14" rx="3" fill="#ebedf0">
 <title>신상윤 · 10-16 · 미제출</title>
 </rect>
 </a>
 <a xlink:href="https://github.com/Chwippo-Eleven/ALGO/tree/main/problem_solve/2026-10/10-20" target="_blank">
-<rect x="396" y="321" width="14" height="14" rx="3" fill="#ebedf0">
+<rect x="360" y="321" width="14" height="14" rx="3" fill="#ebedf0">
 <title>신상윤 · 10-20 · 미제출</title>
 </rect>
 </a>
 <a xlink:href="https://github.com/Chwippo-Eleven/ALGO/tree/main/problem_solve/2026-10/10-21" target="_blank">
-<rect x="414" y="321" width="14" height="14" rx="3" fill="#216e39">
+<rect x="378" y="321" width="14" height="14" rx="3" fill="#216e39">
 <title>신상윤 · 10-21 · 풀이 완료</title>
 </rect>
 </a>
 <a xlink:href="https://github.com/Chwippo-Eleven/ALGO/tree/main/problem_solve/2026-10/10-22" target="_blank">
-<rect x="432" y="321" width="14" height="14" rx="3" fill="#216e39">
+<rect x="396" y="321" width="14" height="14" rx="3" fill="#216e39">
 <title>신상윤 · 10-22 · 풀이 완료</title>
 </rect>
 </a>
 <a xlink:href="https://github.com/Chwippo-Eleven/ALGO/tree/main/problem_solve/2026-10/10-23" target="_blank">
-<rect x="450" y="321" width="14" height="14" rx="3" fill="#216e39">
+<rect x="414" y="321" width="14" height="14" rx="3" fill="#216e39">
 <title>신상윤 · 10-23 · 풀이 완료</title>
 </rect>
 </a>
 <a xlink:href="https://github.com/Chwippo-Eleven/ALGO/tree/main/problem_solve/2026-10/10-26" target="_blank">
-<rect x="468" y="321" width="14" height="14" rx="3" fill="#216e39">
+<rect x="432" y="321" width="14" height="14" rx="3" fill="#216e39">
 <title>신상윤 · 10-26 · 풀이 완료</title>
 </rect>
 </a>
 <a xlink:href="https://github.com/Chwippo-Eleven/ALGO/tree/main/problem_solve/2026-10/10-27" target="_blank">
-<rect x="486" y="321" width="14" height="14" rx="3" fill="#216e39">
+<rect x="450" y="321" width="14" height="14" rx="3" fill="#216e39">
 <title>신상윤 · 10-27 · 풀이 완료</title>
 </rect>
 </a>
 <a xlink:href="https://github.com/Chwippo-Eleven/ALGO/tree/main/problem_solve/2026-10/10-28" target="_blank">
-<rect x="504" y="321" width="14" height="14" rx="3" fill="#ebedf0">
+<rect x="468" y="321" width="14" height="14" rx="3" fill="#ebedf0">
 <title>신상윤 · 10-28 · 미제출</title>
 </rect>
 </a>
 <a xlink:href="https://github.com/Chwippo-Eleven/ALGO/tree/main/problem_solve/2026-10/10-29" target="_blank">
-<rect x="522" y="321" width="14" height="14" rx="3" fill="#216e39">
+<rect x="486" y="321" width="14" height="14" rx="3" fill="#216e39">
 <title>신상윤 · 10-29 · 풀이 완료</title>
 </rect>
 </a>
 <a xlink:href="https://github.com/Chwippo-Eleven/ALGO/tree/main/problem_solve/2026-11/11-02" target="_blank">
-<rect x="540" y="321" width="14" height="14" rx="3" fill="#216e39">
+<rect x="504" y="321" width="14" height="14" rx="3" fill="#216e39">
 <title>신상윤 · 11-02 · 풀이 완료</title>
 </rect>
 </a>
 <a xlink:href="https://github.com/Chwippo-Eleven/ALGO/tree/main/problem_solve/2026-11/11-03" target="_blank">
-<rect x="558" y="321" width="14" height="14" rx="3" fill="#ebedf0">
+<rect x="522" y="321" width="14" height="14" rx="3" fill="#ebedf0">
 <title>신상윤 · 11-03 · 미제출</title>
 </rect>
 </a>
 <a xlink:href="https://github.com/Chwippo-Eleven/ALGO/tree/main/problem_solve/2026-11/11-04" target="_blank">
-<rect x="576" y="321" width="14" height="14" rx="3" fill="#216e39">
+<rect x="540" y="321" width="14" height="14" rx="3" fill="#216e39">
 <title>신상윤 · 11-04 · 풀이 완료</title>
 </rect>
 </a>
 <a xlink:href="https://github.com/Chwippo-Eleven/ALGO/tree/main/problem_solve/2026-11/11-05" target="_blank">
-<rect x="594" y="321" width="14" height="14" rx="3" fill="#ebedf0">
+<rect x="558" y="321" width="14" height="14" rx="3" fill="#ebedf0">
 <title>신상윤 · 11-05 · 미제출</title>
 </rect>
 </a>
 <a xlink:href="https://github.com/Chwippo-Eleven/ALGO/tree/main/problem_solve/2026-11/11-06" target="_blank">
-<rect x="612" y="321" width="14" height="14" rx="3" fill="#216e39">
+<rect x="576" y="321" width="14" height="14" rx="3" fill="#216e39">
 <title>신상윤 · 11-06 · 풀이 완료</title>
+</rect>
+</a>
+<a xlink:href="https://github.com/Chwippo-Eleven/ALGO/tree/main/problem_solve/2026-11/11-09" target="_blank">
+<rect x="594" y="321" width="14" height="14" rx="3" fill="#ebedf0">
+<title>신상윤 · 11-09 · 미제출</title>
+</rect>
+</a>
+<a xlink:href="https://github.com/Chwippo-Eleven/ALGO/tree/main/problem_solve/2026-11/11-10" target="_blank">
+<rect x="612" y="321" width="14" height="14" rx="3" fill="#ebedf0">
+<title>신상윤 · 11-10 · 미제출</title>
 </rect>
 </a>
 <text x="648" y="332" class="stat">이번달 참여 3회 · 최장 스트릭 19일</text>

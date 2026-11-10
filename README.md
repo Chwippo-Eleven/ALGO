@@ -98,8 +98,8 @@
 
 <br />
 
-### 🟨 11-09 데일리 문제
-[외판원 순회](https://www.codetree.ai/ko/trails/complete/curated-cards/intro-traveling-salesman-problem-2/description)
+### 🟨 11-10 데일리 문제
+[택배 배달과 수거하기](https://school.programmers.co.kr/learn/courses/30/lessons/150369)
 
 <br />
 

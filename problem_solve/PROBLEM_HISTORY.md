@@ -3,7 +3,7 @@
 > 이 파일은 GitHub Actions가 자동으로 생성합니다.
 > 문제 중복 여부는 URL 기준으로 판단합니다.
 
-총 문제 수: **74**
+총 문제 수: **75**
 
 | 날짜 | 플랫폼 | 문제 | URL |
 |---|---|---|---|
@@ -81,3 +81,4 @@
 | 2026-11-05 | ETC | 4가지 연산을 이용하여 1 만들기 | https://www.codetree.ai/ko/trails/complete/curated-cards/challenge-make-one-using-four-operations/description |
 | 2026-11-06 | LTC | 185. Department Top Three Salaries | https://leetcode.com/problems/department-top-three-salaries/?envType=study-plan-v2&envId=top-sql-50 |
 | 2026-11-09 | ETC | 외판원 순회 | https://www.codetree.ai/ko/trails/complete/curated-cards/intro-traveling-salesman-problem-2/description |
+| 2026-11-10 | PGS | 택배 배달과 수거하기 | https://school.programmers.co.kr/learn/courses/30/lessons/150369 |
