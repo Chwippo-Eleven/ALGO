@@ -98,8 +98,8 @@
 
 <br />
 
-### 🟨 11-11 데일리 문제
-[퍼즐 조각 채우기](https://school.programmers.co.kr/learn/courses/30/lessons/84021)
+### 🟨 11-12 데일리 문제
+[행렬 테두리 회전하기](https://school.programmers.co.kr/learn/courses/30/lessons/77485)
 
 <br />
 
