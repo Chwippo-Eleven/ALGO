@@ -98,8 +98,8 @@
 
 <br />
 
-### 🟨 11-11 데일리 문제
-[퍼즐 조각 채우기](https://school.programmers.co.kr/learn/courses/30/lessons/84021)
+### 🟨 11-13 데일리 문제
+[최소 덧셈](https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AYe7x0DKBJADFARP)
 
 <br />
 
