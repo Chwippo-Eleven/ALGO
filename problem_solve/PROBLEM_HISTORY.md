@@ -3,7 +3,7 @@
 > 이 파일은 GitHub Actions가 자동으로 생성합니다.
 > 문제 중복 여부는 URL 기준으로 판단합니다.
 
-총 문제 수: **78**
+총 문제 수: **79**
 
 | 날짜 | 플랫폼 | 문제 | URL |
 |---|---|---|---|
@@ -85,3 +85,4 @@
 | 2026-11-11 | PGS | 퍼즐 조각 채우기 | https://school.programmers.co.kr/learn/courses/30/lessons/84021 |
 | 2026-11-12 | PGS | 행렬 테두리 회전하기 | https://school.programmers.co.kr/learn/courses/30/lessons/77485 |
 | 2026-11-16 | PGS | 리코쳇 로봇 | https://school.programmers.co.kr/learn/courses/30/lessons/169199 |
+| 2026-11-17 | ETC | 상한 귤 | https://www.codetree.ai/ko/trails/complete/curated-cards/test-oranges-have-gone-bad/description |
