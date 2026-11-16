@@ -98,8 +98,8 @@
 
 <br />
 
-### 🟨 11-12 데일리 문제
-[행렬 테두리 회전하기](https://school.programmers.co.kr/learn/courses/30/lessons/77485)
+### 🟨 11-13 데일리 문제
+[최소 덧셈](https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AYe7x0DKBJADFARP)
 
 <br />
 
