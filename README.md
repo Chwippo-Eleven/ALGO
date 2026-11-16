@@ -98,8 +98,8 @@
 
 <br />
 
-### 🟨 11-16 데일리 문제
-[리코쳇 로봇](https://school.programmers.co.kr/learn/courses/30/lessons/169199)
+### 🟨 11-17 데일리 문제
+[상한 귤](https://www.codetree.ai/ko/trails/complete/curated-cards/test-oranges-have-gone-bad/description)
 
 <br />
 
