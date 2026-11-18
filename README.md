@@ -98,8 +98,8 @@
 
 <br />
 
-### 🟨 11-17 데일리 문제
-[상한 귤](https://www.codetree.ai/ko/trails/complete/curated-cards/test-oranges-have-gone-bad/description)
+### 🟨 11-18 데일리 문제
+[파괴되지 않은 건물](https://school.programmers.co.kr/learn/courses/30/lessons/92344?language=java)
 
 <br />
 
