@@ -98,8 +98,8 @@
 
 <br />
 
-### 🟨 11-23 데일리 문제
-[텀 프로젝트](https://acmicpc.net/problem/9466)
+### 🟨 11-24 데일리 문제
+[로봇 청소기](https://acmicpc.net/problem/14503)
 
 <br />
 
