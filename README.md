@@ -98,8 +98,8 @@
 
 <br />
 
-### 🟨 11-24 데일리 문제
-[로봇 청소기](https://acmicpc.net/problem/14503)
+### 🟨 11-25 데일리 문제
+[동전 분배](https://acmicpc.net/problem/1943)
 
 <br />
 
