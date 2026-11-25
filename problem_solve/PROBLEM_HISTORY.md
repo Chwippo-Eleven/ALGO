@@ -3,7 +3,7 @@
 > 이 파일은 GitHub Actions가 자동으로 생성합니다.
 > 문제 중복 여부는 URL 기준으로 판단합니다.
 
-총 문제 수: **83**
+총 문제 수: **84**
 
 | 날짜 | 플랫폼 | 문제 | URL |
 |---|---|---|---|
@@ -90,3 +90,4 @@
 | 2026-11-19 | PGS | 블록 이동하기 | https://school.programmers.co.kr/learn/courses/30/lessons/60063 |
 | 2026-11-23 | BOJ | 텀 프로젝트 | https://acmicpc.net/problem/9466 |
 | 2026-11-24 | BOJ | 로봇 청소기 | https://acmicpc.net/problem/14503 |
+| 2026-11-25 | BOJ | 동전 분배 | https://acmicpc.net/problem/1943 |
