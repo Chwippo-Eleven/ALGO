@@ -98,8 +98,8 @@
 
 <br />
 
-### 🟨 11-26 데일리 문제
-[게리맨더링](https://acmicpc.net/problem/17471)
+### 🟨 11-27 데일리 문제
+[적록색약](https://acmicpc.net/problem/10026)
 
 <br />
 
