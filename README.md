@@ -98,8 +98,8 @@
 
 <br />
 
-### 🟨 11-25 데일리 문제
-[동전 분배](https://acmicpc.net/problem/1943)
+### 🟨 11-27 데일리 문제
+[적록색약](https://acmicpc.net/problem/10026)
 
 <br />
 
